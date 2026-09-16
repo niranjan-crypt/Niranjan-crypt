@@ -5,9 +5,6 @@
 </h1>
 
 <p align="center">
-  <a href="https://doi.org/10.1109/EPREC66546.2026.11412040">
-    <img src="https://img.shields.io/badge/IEEE-Publication%20(EPREC%202026)-00629B?style=flat-square&logo=ieee&logoColor=white" alt="IEEE Publication" />
-  </a>
   <a href="mailto:niranjankrishnakumar2005@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email" />
   </a>
