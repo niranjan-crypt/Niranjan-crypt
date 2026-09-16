@@ -55,17 +55,6 @@ I'm interested in **technology, software development, and building practical pro
 
 ---
 
-## 🚀 Featured Projects
-
-<p align="center">
-  <a href="https://github.com/niranjan-crypt/Hybrid-Optimization-for-Congestion-Management-in-Deregulated-Power-Systems">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=niranjan-crypt&repo=Hybrid-Optimization-for-Congestion-Management-in-Deregulated-Power-Systems&theme=tokyonight&hide_border=true" width="48%" alt="Hybrid Optimization Repo Card" />
-  </a>
-  <a href="https://github.com/niranjan-crypt/KinoSync-Cyber-Physical-Smart-Glove-Telemetry-3D-Digital-Twin-System">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=niranjan-crypt&repo=KinoSync-Cyber-Physical-Smart-Glove-Telemetry-3D-Digital-Twin-System&theme=tokyonight&hide_border=true" width="48%" alt="KinoSync Repo Card" />
-  </a>
-</p>
-
 ### 🔹 AI & Machine Learning Projects
 - ⚡ **[Hybrid Power Flow Optimization](https://github.com/niranjan-crypt/Hybrid-Optimization-for-Congestion-Management-in-Deregulated-Power-Systems):** Power Transfer Distribution Factor (PTDF) sensitivity modeling, OOA/KHA/SHO metaheuristic algorithms, and two-stage SciPy SLSQP polishing.
 - 👁️ **[Computer Vision Pipelines](https://github.com/niranjan-crypt/Computer-vision):** Image filtering, edge detection, feature extraction, convolutional models, and real-time computer vision workflows using OpenCV and Python.
