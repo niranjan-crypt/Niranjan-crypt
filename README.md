@@ -5,12 +5,6 @@
 </h1>
 
 <p align="center">
-  <a href="https://github.com/niranjan-crypt">
-    <img src="https://komarev.com/ghpvc/?username=niranjan-crypt&style=flat-square&color=8A2BE2&label=Profile+Views" alt="Profile Views" />
-  </a>
-  <a href="https://github.com/niranjan-crypt?tab=followers">
-    <img src="https://img.shields.io/github/followers/niranjan-crypt?label=Followers&style=flat-square&logo=github&color=24292e" alt="Followers" />
-  </a>
   <a href="https://doi.org/10.1109/EPREC66546.2026.11412040">
     <img src="https://img.shields.io/badge/IEEE-Publication%20(EPREC%202026)-00629B?style=flat-square&logo=ieee&logoColor=white" alt="IEEE Publication" />
   </a>
