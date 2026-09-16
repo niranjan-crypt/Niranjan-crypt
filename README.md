@@ -150,18 +150,6 @@ I'm interested in **technology, software development, and building practical pro
 
 ---
 
-## 📊 GitHub Analytics
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=niranjan-crypt&show_icons=true&theme=tokyonight&count_private=true&hide_border=true" width="48%" alt="GitHub Stats" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=niranjan-crypt&layout=compact&theme=tokyonight&hide_border=true" width="48%" alt="Top Languages" />
-</p>
-
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=niranjan-crypt&theme=tokyonight&hide_border=true" width="97%" alt="GitHub Streak" />
-</p>
-
----
 
 ## 🤝 Connect With Me
 
