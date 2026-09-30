@@ -1,11 +1,11 @@
 <div align="center">
 
   <!-- Dynamic Cyber Waving Banner Graphic -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,40:7c3aed,80:06b6d4,100:10b981&height=210&section=header&text=Niranjan%20Krishnakumar&fontSize=42&fontAlignY=36&fontColor=ffffff&desc=AI%20%E2%80%A2%20Cyber-Physical%20Systems%20%E2%80%A2%20Computational%20Optimization&descAlignY=58&descAlign=50&descSize=19" width="100%" alt="Niranjan Krishnakumar Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:090d16,35:6366f1,70:06b6d4,100:10b981&height=220&section=header&text=Niranjan%20Krishnakumar&fontSize=42&fontAlignY=36&fontColor=ffffff&desc=Computer%20Vision%20%E2%80%A2%20Deep%20Learning%20%E2%80%A2%20Cyber-Physical%20Systems%20%E2%80%A2%20Edge%20AI&descAlignY=58&descAlign=50&descSize=18" width="100%" alt="Niranjan Krishnakumar Banner" />
 
   <!-- Animated Typing Title -->
   <a href="https://github.com/niranjan-crypt">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=Hi%2C+I'm+Niranjan+Krishnakumar+%F0%9F%91%8B;AI+%26+Cyber-Physical+Systems+Engineer;Published+IEEE+Researcher+(EPREC-2026);Hardware+Sensors+%E2%87%84+Applied+Math+%E2%87%84+Edge+AI;Computational+Optimization+%26+3D+Digital+Twins" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=21&pause=1000&color=38BDF8&center=true&vCenter=true&width=750&lines=Computer+Vision+%26+Deep+Learning+Researcher;Spectral-Spatial+3D-CNNs+%26+Explainable+AI+(XAI);Cyber-Physical+Wearables+%26+Real-Time+3D+Digital+Twins;Published+Author+in+IEEE+EPREC-2026;Core+CSE+%E2%80%A2+Mathematical+Optimization+%E2%80%A2+TinyML" alt="Typing SVG" />
   </a>
 
   <!-- Personal Action Badges -->
@@ -29,23 +29,54 @@
 
 ## 👨‍💻 About Me
 
-Welcome to my corner of GitHub! 👋
+Welcome to my portfolio! 👋
 
-I am a computer science researcher and systems builder working where **physical hardware meets mathematical computation and deep learning**. My work focuses on building full-stack, cross-disciplinary systems—from probing microcontroller ADC registers and streaming real-time kinematic telemetry to formulating non-convex metaheuristic solvers and training physics-informed neural networks.
+I am a computer science researcher and systems engineer specializing in **Computer Vision, Deep Learning, Image Processing, and Cyber-Physical Systems (CPS)**. My work investigates the convergence of high-dimensional sensor physics, deep metric representations, and resource-constrained edge execution. 
 
-- 🎓 **Research & Focus:** Artificial Intelligence, Cyber-Physical Systems (CPS), Mathematical Optimization, and Edge AI.
-- ⚡ **Published Author:** Presented and published original research in **IEEE EPREC-2026** (*DOI: [10.1109/EPREC66546.2026.11412040](https://doi.org/10.1109/EPREC66546.2026.11412040)*) on tri-hybrid metaheuristics for power grid congestion relief.
-- 🦾 **Hardware & Wearable CPS:** Designing ESP32-based biometric and kinematic telemetry gloves paired with low-latency BLE and interactive 3D glTF digital twins.
-- 🧠 **Physics-Informed & Edge AI:** Embedding semiconductor physics into neural architectures (PINNs) and deploying quantized 3D-CNNs for real-time sub-50ms inference on embedded SBCs.
-- 💬 **Ask me about:** Power systems & DC-OPF, nature-inspired metaheuristics (OOA, KHA, SHO), hyperspectral imaging, FreeRTOS/ESP32, and formal automata verification.
-- 📫 **Reach me at:** [niranjankrishnakumar2005@gmail.com](mailto:niranjankrishnakumar2005@gmail.com)
+Rather than viewing artificial intelligence as an isolated abstraction or hardware as a passive peripheral, I engineer unified systems: from writing bare-metal register routines and streaming BLE 5.0 kinematic packets, to designing 3D convolutional networks on 1200+ hyperspectral bands, proving safety properties with pushdown automata, and formulating non-convex metaheuristic optimization algorithms.
+
+### 🔬 Core Technical Focus & Competencies
+- 👁️ **Computer Vision & Image Processing:** Hyperspectral imaging (400–1000 nm), 3D-CNN spectral-spatial feature fusion, deep metric learning (ArcFace on $\mathbb{S}^{127}$), Explainable AI (Spectral SHAP, Grad-CAM++, LIME), and classical feature extraction (Hough transforms, GLCM, LBP, HOG, HSV morphology).
+- 🦾 **Cyber-Physical Systems & Embedded Silicon:** Real-time teleoperation hardware, continuous joint angle kinematics, ESP32 firmware (FreeRTOS, low-latency BLE 5.0 GATT), analog signal conditioning, and interactive 3D glTF digital twins.
+- ⚡ **Energy AI & Mathematical Optimization:** Published author in **IEEE EPREC-2026** (*DOI: [10.1109/EPREC66546.2026.11412040](https://doi.org/10.1109/EPREC66546.2026.11412040)*) for tri-hybrid metaheuristics (OOA, KHA, SHO) and PTDF sensitivity modeling in deregulated power grids.
+- 📐 **Physics-Informed Deep Learning & Data Science:** Embedding physical constraints into neural architectures (PINNs with semiconductor diode equations), stochastic 2D Markov chain simulation, and rigorous statistical validation (Bayesian Regularization, Cohen's $d$, two-sample $t$-tests).
+- ⚙️ **Core Computer Science & Systems:** Automata theory (DFA/NFA, Timed Automata, CFG in CNF, Pushdown Automata), cache-conscious vector processing, and memory-safe systems engineering.
 
 ---
 
-### 🌐 Cross-Disciplinary Architecture Blueprint
----
+### 🌐 System Architecture Pipeline
 
+```mermaid
+flowchart LR
+    subgraph S1 ["1. Sensing & Physical Layer"]
+        direction TB
+        A["Hyperspectral Sensors (1200+ Bands, 400-1000nm)"]
+        B["ESP32 Kinematic Glove & Biometric PPG"]
+        C["Power Transmission Grid Sensors (PTDF / DSP)"]
+    end
 
+    subgraph S2 ["2. Signal & Tensor Engineering"]
+        direction TB
+        D["Dark/White Calibration & Spatial Cropping"]
+        E["Continuous Kinematics & Hysteresis Filtering"]
+        F["FFT Spectrum Isolation & THD Analytics"]
+    end
+
+    subgraph S3 ["3. AI, Metric Learning & Optimization"]
+        direction TB
+        G["Spectral-Spatial 3D-CNN + ArcFace on S¹²⁷"]
+        H["Physics-Informed Neural Nets (PINN Solar MPPT)"]
+        I["Tri-Hybrid Metaheuristics (OOA + KHA + SHO)"]
+    end
+
+    subgraph S4 ["4. Real-Time Edge & Digital Twin"]
+        direction TB
+        J["Sub-50ms INT8 Inference (Raspberry Pi 4 / Edge)"]
+        K["Interactive 3D glTF Skeletal Rigging"]
+        L["Dual XAI: Spectral SHAP + Spatial Grad-CAM++"]
+    end
+
+    S1 --> S2 --> S3 --> S4
 ---
 
 ## 🎖️ Published Research
