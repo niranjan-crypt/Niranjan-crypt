@@ -76,7 +76,7 @@ flowchart LR
         L["Dual XAI: Spectral SHAP + Spatial Grad-CAM++"]
     end
 
-    S1 --> S2 --> S3 --> S4
+    S1 --> S2 --> S3 --> S4'''
 ---
 
 ## 🎖️ Published Research
