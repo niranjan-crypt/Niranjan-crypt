@@ -44,41 +44,6 @@ Rather than viewing artificial intelligence as an isolated abstraction or hardwa
 
 ---
 
-### 🌐 System Architecture Pipeline
-
-```mermaid
-flowchart LR
-    subgraph S1 ["1. Sensing & Physical Layer"]
-        direction TB
-        A["Hyperspectral Sensors (1200+ Bands, 400-1000nm)"]
-        B["ESP32 Kinematic Glove & Biometric PPG"]
-        C["Power Transmission Grid Sensors (PTDF / DSP)"]
-    end
-
-    subgraph S2 ["2. Signal & Tensor Engineering"]
-        direction TB
-        D["Dark/White Calibration & Spatial Cropping"]
-        E["Continuous Kinematics & Hysteresis Filtering"]
-        F["FFT Spectrum Isolation & THD Analytics"]
-    end
-
-    subgraph S3 ["3. AI, Metric Learning & Optimization"]
-        direction TB
-        G["Spectral-Spatial 3D-CNN + ArcFace on S¹²⁷"]
-        H["Physics-Informed Neural Nets (PINN Solar MPPT)"]
-        I["Tri-Hybrid Metaheuristics (OOA + KHA + SHO)"]
-    end
-
-    subgraph S4 ["4. Real-Time Edge & Digital Twin"]
-        direction TB
-        J["Sub-50ms INT8 Inference (Raspberry Pi 4 / Edge)"]
-        K["Interactive 3D glTF Skeletal Rigging"]
-        L["Dual XAI: Spectral SHAP + Spatial Grad-CAM++"]
-    end
-
-    S1 --> S2 --> S3 --> S4'''
----
-
 ## 🎖️ Published Research
 
 <table width="100%">
