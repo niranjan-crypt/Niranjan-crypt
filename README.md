@@ -1,11 +1,58 @@
+<div align="center">
+
+  <!-- Dynamic Cyber Waving Banner Graphic -->
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,40:7c3aed,80:06b6d4,100:10b981&height=210&section=header&text=Niranjan%20Krishnakumar&fontSize=42&fontAlignY=36&fontColor=ffffff&desc=AI%20%E2%80%A2%20Cyber-Physical%20Systems%20%E2%80%A2%20Computational%20Optimization&descAlignY=58&descAlign=50&descSize=19" width="100%" alt="Niranjan Krishnakumar Banner" />
+
+  <!-- Animated Typing Title -->
+  <a href="https://github.com/niranjan-crypt">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=22&pause=1000&color=A78BFA&center=true&vCenter=true&width=700&lines=Hi%2C+I'm+Niranjan+Krishnakumar+%F0%9F%91%8B;AI+%26+Cyber-Physical+Systems+Engineer;Published+IEEE+Researcher+(EPREC-2026);Hardware+Sensors+%E2%87%84+Applied+Math+%E2%87%84+Edge+AI;Computational+Optimization+%26+3D+Digital+Twins" alt="Typing SVG" />
+  </a>
+
+  <!-- Personal Action Badges -->
+  <p align="center">
+    <a href="https://doi.org/10.1109/EPREC66546.2026.11412040">
+      <img src="https://img.shields.io/badge/IEEE%20EPREC--2026-Published%20Author-00629B?style=for-the-badge&logo=ieee&logoColor=white" alt="IEEE Publication" />
+    </a>
+    &nbsp;
+    <a href="mailto:niranjankrishnakumar2005@gmail.com">
+      <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+    </a>
+    &nbsp;
+    <a href="https://github.com/niranjan-crypt">
+      <img src="https://img.shields.io/badge/GitHub-niranjan--crypt-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+    </a>
+  </p>
+
+</div>
 
 ---
 
-## 🎖️ Published Peer-Reviewed Research
+## 👨‍💻 About Me
+
+Welcome to my corner of GitHub! 👋
+
+I am a computer science researcher and systems builder working where **physical hardware meets mathematical computation and deep learning**. My work focuses on building full-stack, cross-disciplinary systems—from probing microcontroller ADC registers and streaming real-time kinematic telemetry to formulating non-convex metaheuristic solvers and training physics-informed neural networks.
+
+- 🎓 **Research & Focus:** Artificial Intelligence, Cyber-Physical Systems (CPS), Mathematical Optimization, and Edge AI.
+- ⚡ **Published Author:** Presented and published original research in **IEEE EPREC-2026** (*DOI: [10.1109/EPREC66546.2026.11412040](https://doi.org/10.1109/EPREC66546.2026.11412040)*) on tri-hybrid metaheuristics for power grid congestion relief.
+- 🦾 **Hardware & Wearable CPS:** Designing ESP32-based biometric and kinematic telemetry gloves paired with low-latency BLE and interactive 3D glTF digital twins.
+- 🧠 **Physics-Informed & Edge AI:** Embedding semiconductor physics into neural architectures (PINNs) and deploying quantized 3D-CNNs for real-time sub-50ms inference on embedded SBCs.
+- 💬 **Ask me about:** Power systems & DC-OPF, nature-inspired metaheuristics (OOA, KHA, SHO), hyperspectral imaging, FreeRTOS/ESP32, and formal automata verification.
+- 📫 **Reach me at:** [niranjankrishnakumar2005@gmail.com](mailto:niranjankrishnakumar2005@gmail.com)
+
+---
+
+### 🌐 Cross-Disciplinary Architecture Blueprint
+---
+
+
+---
+
+## 🎖️ Published Research
 
 <table width="100%">
   <tr>
-    <td style="padding: 18px; border: 1px solid #30363d; border-radius: 8px;">
+    <td style="padding: 16px; border: 1px solid #30363d; border-radius: 8px;">
       <div align="right">
         <a href="https://doi.org/10.1109/EPREC66546.2026.11412040">
           <img src="https://img.shields.io/badge/IEEE%20Xplore-DOI%3A%2010.1109%2FEPREC66546.2026.11412040-00629B?style=flat-square&logo=ieee&logoColor=white" alt="DOI" />
@@ -14,146 +61,37 @@
       </div>
       <h3>⚡ <a href="https://github.com/niranjan-crypt/Hybrid-Optimization-for-Congestion-Management-in-Deregulated-Power-Systems">Hybrid Optimization for Congestion Management in Deregulated Power Systems</a></h3>
       <p>
-        <strong>6th International Conference on Electric Power and Renewable Energy (EPREC-2026)</strong><br>
-        <em>Department of Electrical Engineering, Indian Institute of Technology (IIT) Bhilai, India</em><br>
-        <strong>Publisher:</strong> IEEE &nbsp;|&nbsp; <strong>Author:</strong> Niranjan Krishnakumar &nbsp;|&nbsp; <strong>License:</strong> MIT
+        <b>6th International Conference on Electric Power and Renewable Energy (EPREC-2026)</b><br>
+        <i>Department of Electrical Engineering, Indian Institute of Technology (IIT) Bhilai, India</i><br>
+        <b>Publisher:</b> IEEE &nbsp;|&nbsp; <b>DOI:</b> <a href="https://doi.org/10.1109/EPREC66546.2026.11412040"><code>10.1109/EPREC66546.2026.11412040</code></a> &nbsp;|&nbsp; <b>License:</b> MIT
       </p>
       <ul>
-        <li><strong>Sensitivity Matrix Modeling:</strong> Formulated nodal active power injections and line power flows via the Power Transfer Distribution Factor (PTDF) sensitivity matrix:
-          $$\mathbf{C} = \mathbf{A} \cdot \mathbf{B}$$
-          where $\mathbf{B} \in \mathbb{R}^{N \times 1}$ is the bus injection vector, $\mathbf{A} \in \mathbb{R}^{M \times N}$ is the PTDF sensitivity matrix, and $\mathbf{C} \in \mathbb{R}^{M \times 1}$ represents active line flows across $M$ transmission branches.</li>
-        <li><strong>Hierarchical Multi-Objective Formulation:</strong> Structured hard physical constraints (line capacity $|C_i| \le C_{i,\max}$, generator physical limits, power balance $\sum B_i = 0$ with $10^{10}$ penalty), strictly minimizing shedded load ($10^7$ penalty), generator redispatch deviation ($10^5$), and economic rescheduling costs ($0.1$).</li>
-        <li><strong>Tri-Hybrid Metaheuristic Architecture:</strong> Synthesized an adaptive probability-guided metaheuristic combining:
-          <ul>
-            <li><strong>Orca Optimization Algorithm (OOA):</strong> Time-decaying coordinated pursuit exploitation.</li>
-            <li><strong>Krill Herd Algorithm (KHA):</strong> Multi-dimensional foraging and biological exploration.</li>
-            <li><strong>Spotted Hyena Optimizer (SHO):</strong> Encirclement and social hierarchy mechanism.</li>
-          </ul>
-        </li>
-        <li><strong>Two-Stage SciPy SLSQP Polishing:</strong> Post-processed metaheuristic solutions with Sequential Least Squares Programming (SLSQP) for tight constraint satisfaction and sub-megawatt precision.</li>
+        <li><strong>Sensitivity Matrix Modeling:</strong> Formulated nodal power injections and branch power flows via the Power Transfer Distribution Factor (PTDF) matrix: $\mathbf{C} = \mathbf{A} \cdot \mathbf{B}$.</li>
+        <li><strong>Novel Tri-Hybrid Metaheuristic:</strong> Coupled <b>Orca Optimization Algorithm (OOA)</b>, <b>Krill Herd Algorithm (KHA)</b>, and <b>Spotted Hyena Optimizer (SHO)</b> with dynamic adaptive selection to escape local minima in non-convex search spaces.</li>
+        <li><strong>Hierarchical Multi-Objective Formulation:</strong> Strictly enforced physical line limits ($10^{10}$ penalty), prioritized minimal load shedding ($10^7$), minimized generator redispatch deviation ($10^5$), and polished solutions via two-stage SciPy SLSQP.</li>
       </ul>
-      <p>
-        <a href="https://github.com/niranjan-crypt/Hybrid-Optimization-for-Congestion-Management-in-Deregulated-Power-Systems">
-          <img src="https://img.shields.io/badge/View_Repository-181717?style=flat-square&logo=github&logoColor=white" alt="Repo" />
-        </a>
-      </p>
     </td>
   </tr>
 </table>
 
 ---
 
-## 🚀 Featured Flagship Projects
+## 🚀 Featured Projects
 
-### 1. 🦾 [KinoSync: Cyber-Physical Smart Glove & 3D Digital Twin Platform](https://github.com/niranjan-crypt/KinoSync-Cyber-Physical-Smart-Glove-Telemetry-3D-Digital-Twin-System)
-> *Real-time Cyber-Physical System (CPS) bridging ESP32 hardware telemetry to an interactive 3D skeletal digital twin.*
+### ⚡ Energy Systems, Optimization & Power AI
+- ⚡ **[Hybrid Power Flow Congestion Optimization](https://github.com/niranjan-crypt/Hybrid-Optimization-for-Congestion-Management-in-Deregulated-Power-Systems):** DC-OPF sensitivity modeling using PTDF matrices, tri-hybrid metaheuristics (OOA/KHA/SHO), and two-stage SciPy SLSQP gradient polishing for transmission overload relief without avoidable load shedding.
+- ⚡ **[IntelliPQ: Power Quality Intelligence & Fault Diagnostics](https://github.com/niranjan-crypt/IntelliPQ-AI-Based-Power-Quality-Monitoring-Fault-Detection):** Real-time smart grid DSP engine (FFT, THD, crest factor) featuring a **Neuro-Symbolic Arbitration Layer** that balances deterministic IEEE 1159/519 standards against 1D-CNN + BiLSTM deep temporal models to resolve conflicting alarms.
+- ☀️ **[Physics-Informed Solar MPPT & Markov Weather Modeling](https://github.com/niranjan-crypt/ANN-MARKOV):** Physics-Informed Neural Network (PINN) embedding semiconductor diode equations ($\ln(G), \sqrt{G}$) for single-step zero-oscillation $(V_{mpp}, I_{mpp})$ tracking, stress-tested against a 300-state 2D Markov stochastic weather simulator and Simulink DC-DC converters.
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Hardware-ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white" />
-  <img src="https://img.shields.io/badge/Protocol-BLE_5.0-007AFF?style=flat-square&logo=bluetooth&logoColor=white" />
-  <img src="https://img.shields.io/badge/Client-Flutter_3.x-02569B?style=flat-square&logo=flutter&logoColor=white" />
-  <img src="https://img.shields.io/badge/3D_Engine-glTF_/_model__viewer-6366F1?style=flat-square" />
-  <img src="https://img.shields.io/badge/Biometrics-PPG_Pulse_Sensor-E11D48?style=flat-square" />
-</p>
+### 🦾 Cyber-Physical Systems & IoT
+- 🦾 **[KinoSync: Smart Glove Telemetry & 3D Digital Twin Platform](https://github.com/niranjan-crypt/KinoSync-Cyber-Physical-Smart-Glove-Telemetry-3D-Digital-Twin-System):** Real-time CPS powered by an **ESP32** streaming 5-finger articulation and biometric PPG heart-rate telemetry over **BLE 5.0** to a **Flutter** dashboard. Features 3D glTF skeletal animation, $+12\%$ dominant-finger hysteresis filtering, continuous joint flexion telemetry ($\theta = \text{flexPercent} \times 0.9, 0^\circ \to 90^\circ$), and clinical rehabilitation session logging.
 
-* **Real-Time 3D Digital Twin:** Renders an interactive 3D hand rig (`Hand_Animation_Final.glb`) with multi-finger skeletal animations (`Thumb_Flex`, `Index_Flex`, `Middle_Flex`, `Ring_Flex`, `Little_Flex`) updated continuously via BLE packet streams.
-* **Continuous Joint Kinematics:** Converts raw sensor impedance into biomechanical joint flexion angles:
-  $$\theta = \text{flexPercent} \times 0.9 \quad (0\% \to 0^\circ, \ 100\% \to 90^\circ)$$
-* **Dominant-Finger Hysteresis Filter:** Implemented a $+12\%$ threshold hysteresis state filter to eliminate high-frequency animation jitter and isolate primary intentional finger motions.
-* **Biometric PPG & Clinical Logger:** Integrated photoplethysmography (PPG) pulse visualizer for live BPM tracking, synchronized heartbeat animations, and local storage for up to 50 rehabilitation sessions with $\Delta\%$ flexion delta evaluation.
+### 👁️ Computer Vision, Biometrics & XAI
+- 👁️ **[Hyperspectral Face Identification & Explainable AI (XAI)](https://github.com/niranjan-crypt/Hyperspectral-Face-Identification-XAI):** Anti-spoofing biometrics utilizing 1200+ contiguous spectral bands (400–1000 nm). Features 6-objective metaheuristic band selection (PSO/GA/GWO) down to 5–20 bands, UISM-Net with ArcFace loss on $\mathbb{S}^{127}$, dual XAI (Spectral SHAP + Spatial Grad-CAM++), and sub-50ms INT8 deployment on Raspberry Pi 4.
+- 🔍 **[Hybrid Vision for Power Transmission Fault Detection](https://github.com/niranjan-crypt/Hybrid-Computer-Vision-and-Deep-Learning-for-Automated-Power-Transmission-Fault-Detection):** Autonomous aerial grid inspection benchmarking classical vision (Hough Circles for insulator disc faults, HSV morphological thresholding for corrosion, GLCM/HOG) against deep transfer learning backbones (AlexNet, VGG16, InceptionV3, ResNet50).
 
----
-
-### 2. 👁️ [Hyperspectral Human Face Identification & Explainable AI (XAI)](https://github.com/niranjan-crypt/Hyperspectral-Face-Identification-XAI)
-> *Anti-spoofing biometrics via 1200+ contiguous spectral bands (400–1000 nm), 3D-CNN feature fusion, and Edge AI deployment.*
-
-<p align="left">
-  <img src="https://img.shields.io/badge/TensorFlow-2.15+-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
-  <img src="https://img.shields.io/badge/Architecture-Spectral--Spatial_3D--CNN-9333EA?style=flat-square" />
-  <img src="https://img.shields.io/badge/Loss-ArcFace_on_S^127-10B981?style=flat-square" />
-  <img src="https://img.shields.io/badge/XAI-Spectral_SHAP_%2B_Grad--CAM++-3B82F6?style=flat-square" />
-  <img src="https://img.shields.io/badge/Edge_Deploy-Raspberry_Pi_4-C51A4A?style=flat-square&logo=raspberrypi&logoColor=white" />
-</p>
-
-* **Subsurface Biometric Signatures:** Samples 1200+ contiguous narrow-band channels across 400–1000 nm (VIS to NIR) to capture invariant subsurface tissue characteristics (melanin, oxygenated/deoxygenated hemoglobin, and hydration), providing absolute immunity against 2D photos, 4K screen replays, 3D silicone masks, and generative deepfakes.
-* **Metaheuristic Band Selection:** Engineered a 6-component multi-objective fitness formulation:
-  $$\max_{B} \; F(B) = \gamma \mathcal{J}_{\text{Fisher}}(B) + \delta \mathcal{C}(B) + \lambda \mathcal{D}(B) - \eta \mathcal{R}(B) - \xi \mathcal{S}(B) + \zeta \Phi(B)$$
-  Optimized via PSO, GA, and GWO to compress 1200+ bands into an optimal 5–20 channel subset without loss of discriminative entropy.
-* **Unit Hyperspherical Metric Space ($\mathbb{S}^{127}$):** Developed **UISM-Net** (MobileNetV2 backbone with $L_2$-normalized embedding projection on $\mathbb{S}^{127}$) trained with Additive Angular Margin Loss (**ArcFace**):
-  $$\mathcal{L}_{\text{ArcFace}} = -\frac{1}{N} \sum_{i=1}^N \log \frac{e^{s \cdot \cos(\theta_{y_i} + m)}}{e^{s \cdot \cos(\theta_{y_i} + m)} + \sum_{j \neq y_i} e^{s \cdot \cos(\theta_j)}}$$
-* **Dual-Domain XAI & Edge Deployment:** Auditable biometrics through **Spectral SHAP** (band importance attribution) and **Spatial Grad-CAM++ / LIME** (facial landmark saliency). Quantized (FP16/INT8 TFLite) for Raspberry Pi 4 Model B achieving $<50\text{ms}$ edge inference latency under $<3\text{W}$ power envelope.
-
----
-
-### 3. ⚡ [IntelliPQ: AI-Based Power Quality Monitoring & Fault Intelligence](https://github.com/niranjan-crypt/IntelliPQ-AI-Based-Power-Quality-Monitoring-Fault-Detection)
-> *Smart grid disturbance diagnosis combining Digital Signal Processing (DSP), IEEE Standards, and Deep Learning.*
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Compliance-IEEE_1159_%7C_519-F59E0B?style=flat-square" />
-  <img src="https://img.shields.io/badge/AI_Model-1D--CNN_%2B_Bidirectional_LSTM-06B6D4?style=flat-square" />
-  <img src="https://img.shields.io/badge/Analytics-DSP_/_FFT_Spectrum-8B5CF6?style=flat-square" />
-  <img src="https://img.shields.io/badge/Framework-Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" />
-</p>
-
-* **Full DSP Analytics Engine:** Real-time computation of Fast Fourier Transform (FFT) harmonic spectrum, Total Harmonic Distortion (THD), RMS voltage, peak amplitude, and crest factor.
-* **Neuro-Symbolic Arbitration Layer:** Arbitrates between a deterministic rule engine (strict IEEE 1159 voltage sags/swells and IEEE 519 harmonic thresholds) and a deep temporal classifier (1D-CNN + BiLSTM) to eliminate false alarms and validate critical anomalies.
-* **Prescriptive Engineering Remedies:** Translates raw diagnostic flags directly into actionable utility procedures (e.g., active harmonic filter tuning, AVR compensation, or capacitor bank de-energization).
-* **Automated Compliance Auditing:** Generates downloadable official diagnostic certificates (`.txt`) and synchronized waveform records (`.csv`).
-
----
-
-### 4. ☀️ [Physics-Informed ANN & Markov Chain MPPT for Solar Photovoltaic Systems](https://github.com/niranjan-crypt/ANN-MARKOV)
-> *Eliminating steady-state tracking oscillations in solar PV using semiconductor physics feature embedding and stochastic weather simulation.*
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Platform-MATLAB_/_Simulink-ED8B00?style=flat-square&logo=mathworks&logoColor=white" />
-  <img src="https://img.shields.io/badge/Model-Physics--Informed_Neural_Net_(PINN)-10B981?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stochastics-2D_Markov_Chain_(300_States)-6366F1?style=flat-square" />
-  <img src="https://img.shields.io/badge/Regularization-Bayesian_(`trainbr`)-EC4899?style=flat-square" />
-</p>
-
-* **Semiconductor Physics Feature Engineering:** Directly maps ambient $(G, T)$ to optimal maximum power points $(V_{mpp}, I_{mpp})$ in a single step without perturbational oscillations by constructing 6 domain features:
-  $$\mathbf{X} = \left[ G, \, T, \, \ln(G), \, \sqrt{G}, \, (T - T_{\text{ref}})^2, \, \frac{G}{G_{\text{ref}}}(T - T_{\text{ref}}) \right]$$
-  where $\ln(G)$ embeds the logarithmic diode equation ($V_{oc} \propto \frac{nkT}{q} \ln \frac{I_{ph}}{I_0}$).
-* **Rigorous Statistical Overfitting Validation:** Enforced group-based cluster partitioning, Bayesian Regularization (`trainbr`), two-sample $t$-test evaluation ($p \ge 0.05$), and Cohen's $d$ effect size verification ($d < 0.2$).
-* **2D Markov Stochastic Weather Generator:** Discretized $(T, G)$ space into 300 discrete states ($15 \text{ temperature} \times 20 \text{ irradiance bins}$) to generate realistic diurnal transitions and rapid cloud shading transients for dynamic benchmark testing.
-* **Simulink Co-Simulation:** Benchmarked against Newton-Raphson 5-parameter single-diode P&O and InC controllers across DC-DC boost converters and Hybrid Energy Storage Systems (HESS).
-
----
-
-### 5. 🔍 [Hybrid Computer Vision & Deep Learning for Power Transmission Infrastructure Fault Detection](https://github.com/niranjan-crypt/Hybrid-Computer-Vision-and-Deep-Learning-for-Automated-Power-Transmission-Fault-Detection)
-> *Autonomous aerial inspection and multi-class anomaly detection on high-voltage transmission lines.*
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Vision-OpenCV_&_Scikit--Image-5C3EE8?style=flat-square&logo=opencv&logoColor=white" />
-  <img src="https://img.shields.io/badge/Classifiers-SVM_|_Random_Forest_|_KNN-F7931E?style=flat-square" />
-  <img src="https://img.shields.io/badge/Deep_Learning-AlexNet_|_VGG16_|_GoogLeNet_|_ResNet50-EE4C2C?style=flat-square" />
-</p>
-
-* **Defect-Specific Classical Pipelines:**
-  * *Insulator Disc Defects:* Circular Hough Transform & multi-scale template matching for broken/missing glass disc isolation.
-  * *Metallic Corrosion:* HSV color space thresholding combined with mathematical morphological operations.
-  * *Foreign Encroachment:* Contour geometry and texture segmentation for bird nest and debris detection.
-* **Dual-Paradigm Benchmarking:** Extracted handcrafted spatial-texture features (GLCM, LBP, HOG, Canny, color moments) trained against classical classifiers, compared directly against deep transfer learning backbones (AlexNet, VGG16, InceptionV3, ResNet50).
-
----
-
-### 6. 🚗 [TOC-AV: Formal Verification System for Autonomous Vehicles](https://github.com/niranjan-crypt/Computation-and-Compiler-design)
-> *Theory of Computation & Automata formal verification applied to safety-critical autonomous parking maneuvers.*
-
-<p align="left">
-  <img src="https://img.shields.io/badge/Theory-Formal_Automata_Verification-3B82F6?style=flat-square" />
-  <img src="https://img.shields.io/badge/Stack-JavaScript_ES6_%2B_Canvas-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/Scope-DFA_|_NFA_|_PDA_|_CFG_|_Timed_Automata-10B981?style=flat-square" />
-</p>
-
-* **Safety-Critical State Modeling:** Formally proves correctness of the autonomous parking lifecycle:
-  $$\text{SEARCH}^+ \to \text{STOP} \to \text{REVERSE} \to \text{ALIGN} \to \text{PARK}$$
-* **Mathematical Automata Implementation:**
-  * *DFA 5-Tuple Formulation:* $M = (Q, \Sigma, \delta, q_0, F)$ over states $\{q_0, q_1, q_2, q_3, q_4, q_E\}$ with asynchronous emergency obstacle interruptions (`OBSTACLE` $\to q_E$, `CLEAR` $\to q_1$).
-  * *Subset Construction:* Visualized dynamic $\epsilon$-closure mappings and NFA-to-DFA conversion.
-  * *Timed Automata:* Measures deterministic reaction latency ($\Delta T$) between obstacle detection and deceleration.
-  * *Context-Free Grammar & PDA:* Validates command grammar in Chomsky Normal Form (CNF) via a Pushdown Automaton.
+### ⚙️ Systems & Theoretical Computer Science
+- 🚗 **[TOC-AV: Formal Verification System for Autonomous Vehicles](https://github.com/niranjan-crypt/Computation-and-Compiler-design):** Formal automata verification proving safety-critical autonomous parking sequences ($\text{SEARCH}^+ \to \text{STOP} \to \text{REVERSE} \to \text{ALIGN} \to \text{PARK}$) via Deterministic Finite Automata (DFA), NFAs with $\epsilon$-transitions, Timed Automata ($\Delta T$ emergency braking latency), and Pushdown Automata in CNF.
 
 ---
 
@@ -161,7 +99,7 @@
 
 <div align="center">
 
-### Programming & Scientific Computing
+### Languages & Scientific Foundations
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![C](https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black)
@@ -179,14 +117,14 @@
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 
-### Cyber-Physical Systems, Embedded & Hardware
+### Embedded Systems, Hardware & IoT
 ![ESP32](https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white)
 ![Raspberry Pi](https://img.shields.io/badge/Raspberry_Pi_4-C51A4A?style=for-the-badge&logo=raspberrypi&logoColor=white)
 ![BLE](https://img.shields.io/badge/Bluetooth_LE_5.0-0082FC?style=for-the-badge&logo=bluetooth&logoColor=white)
 ![Simulink](https://img.shields.io/badge/Simulink-E16726?style=for-the-badge&logo=mathworks&logoColor=white)
-![Sensors](https://img.shields.io/badge/Telemetry_%26_Biometrics-10B981?style=for-the-badge)
+![Sensors](https://img.shields.io/badge/Kinematic_%26_Biometric_Telemetry-10B981?style=for-the-badge)
 
-### Software Engineering, Mobile & Cloud
+### Software Architecture, Mobile & Cloud
 ![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
@@ -198,26 +136,7 @@
 
 ---
 
-## 📈 GitHub Metrics & Activity
-
-<div align="center">
-  <table border="0">
-    <tr>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api?username=niranjan-crypt&show_icons=true&theme=radical&hide_border=true&title_color=7C3AED&icon_color=06B6D4" alt="GitHub Stats" />
-      </td>
-      <td>
-        <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=niranjan-crypt&layout=compact&theme=radical&hide_border=true&title_color=7C3AED" alt="Top Languages" />
-      </td>
-    </tr>
-  </table>
-  <br>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=niranjan-crypt&theme=radical&hide_border=true&ring=7C3AED&fire=06B6D4&currStreakNum=7C3AED" alt="Streak Stats" />
-</div>
-
----
-
-## 🤝 Connect & Collaborate
+## 🤝 Connect With Me
 
 <p align="center">
   <a href="mailto:niranjankrishnakumar2005@gmail.com">
@@ -233,6 +152,8 @@
   </a>
 </p>
 
+---
+
 <p align="center">
-  <em>"Engineering at the convergence of mathematical optimization, physics-informed AI, and real-time physical systems."</em>
+  <em>"Operating at the intersection where physical hardware, applied mathematics, and artificial intelligence converge."</em>
 </p>
