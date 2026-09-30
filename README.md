@@ -42,29 +42,20 @@ Rather than viewing artificial intelligence as an isolated abstraction or hardwa
 - 📐 **Physics-Informed Deep Learning & Data Science:** Embedding physical constraints into neural architectures (PINNs with semiconductor diode equations), stochastic 2D Markov chain simulation, and rigorous statistical validation (Bayesian Regularization, Cohen's $d$, two-sample $t$-tests).
 - ⚙️ **Core Computer Science & Systems:** Automata theory (DFA/NFA, Timed Automata, CFG in CNF, Pushdown Automata), cache-conscious vector processing, and memory-safe systems engineering.
 
----
 
 ## 🎖️ Published Research
 
 <table width="100%">
   <tr>
-    <td style="padding: 16px; border: 1px solid #30363d; border-radius: 8px;">
-      <div align="right">
-        <a href="https://doi.org/10.1109/EPREC66546.2026.11412040">
-          <img src="https://img.shields.io/badge/IEEE%20Xplore-DOI%3A%2010.1109%2FEPREC66546.2026.11412040-00629B?style=flat-square&logo=ieee&logoColor=white" alt="DOI" />
-        </a>
-        <img src="https://img.shields.io/badge/Status-Presented%20%26%20Published-2ea44f?style=flat-square" alt="Published" />
-      </div>
+    <td>
       <h3>⚡ <a href="https://github.com/niranjan-crypt/Hybrid-Optimization-for-Congestion-Management-in-Deregulated-Power-Systems">Hybrid Optimization for Congestion Management in Deregulated Power Systems</a></h3>
-      <p>
-        <b>6th International Conference on Electric Power and Renewable Energy (EPREC-2026)</b><br>
-        <i>Department of Electrical Engineering, Indian Institute of Technology (IIT) Bhilai, India</i><br>
-        <b>Publisher:</b> IEEE &nbsp;|&nbsp; <b>DOI:</b> <a href="https://doi.org/10.1109/EPREC66546.2026.11412040"><code>10.1109/EPREC66546.2026.11412040</code></a> &nbsp;|&nbsp; <b>License:</b> MIT
-      </p>
+      <p><b>6th International Conference on Electric Power and Renewable Energy (EPREC-2026)</b><br>
+      <i>Department of Electrical Engineering, Indian Institute of Technology (IIT) Bhilai, India</i><br>
+      <b>Publisher:</b> IEEE &nbsp;|&nbsp; <b>DOI:</b> <a href="https://doi.org/10.1109/EPREC66546.2026.11412040"><code>10.1109/EPREC66546.2026.11412040</code></a></p>
       <ul>
-        <li><strong>Sensitivity Matrix Modeling:</strong> Formulated nodal power injections and branch power flows via the Power Transfer Distribution Factor (PTDF) matrix: $\mathbf{C} = \mathbf{A} \cdot \mathbf{B}$.</li>
-        <li><strong>Novel Tri-Hybrid Metaheuristic:</strong> Coupled <b>Orca Optimization Algorithm (OOA)</b>, <b>Krill Herd Algorithm (KHA)</b>, and <b>Spotted Hyena Optimizer (SHO)</b> with dynamic adaptive selection to escape local minima in non-convex search spaces.</li>
-        <li><strong>Hierarchical Multi-Objective Formulation:</strong> Strictly enforced physical line limits ($10^{10}$ penalty), prioritized minimal load shedding ($10^7$), minimized generator redispatch deviation ($10^5$), and polished solutions via two-stage SciPy SLSQP.</li>
+        <li>Designed a novel tri-hybrid metaheuristic algorithm combining <b>Orca Optimization Algorithm (OOA)</b>, <b>Krill Herd Algorithm (KHA)</b>, and <b>Spotted Hyena Optimizer (SHO)</b>.</li>
+        <li>Implemented dynamic adaptive algorithm selection, local search operators, and stagnation diversification for optimal power flow (OPF) on IEEE test networks.</li>
+        <li>Achieved safe transmission line overload relief with minimal generator redispatch deviation and zero avoidable load shedding.</li>
       </ul>
     </td>
   </tr>
@@ -72,22 +63,16 @@ Rather than viewing artificial intelligence as an isolated abstraction or hardwa
 
 ---
 
-## 🚀 Featured Projects
+### 🔹 AI & Machine Learning Projects
+- ⚡ **[Hybrid Power Flow Optimization](https://github.com/niranjan-crypt/Hybrid-Optimization-for-Congestion-Management-in-Deregulated-Power-Systems):** Power Transfer Distribution Factor (PTDF) sensitivity modeling, OOA/KHA/SHO metaheuristic algorithms, and two-stage SciPy SLSQP polishing.
+- 👁️ **[Computer Vision Pipelines](https://github.com/niranjan-crypt/Computer-vision):** Image filtering, edge detection, feature extraction, convolutional models, and real-time computer vision workflows using OpenCV and Python.
+- 🧠 **[ANN-MARKOV Systems](https://github.com/niranjan-crypt/ANN-MARKOV):** Combining Artificial Neural Networks (ANN) with Markov stochastic processes in MATLAB for sequence prediction and pattern analysis.
 
-### ⚡ Energy Systems, Optimization & Power AI
-- ⚡ **[Hybrid Power Flow Congestion Optimization](https://github.com/niranjan-crypt/Hybrid-Optimization-for-Congestion-Management-in-Deregulated-Power-Systems):** DC-OPF sensitivity modeling using PTDF matrices, tri-hybrid metaheuristics (OOA/KHA/SHO), and two-stage SciPy SLSQP gradient polishing for transmission overload relief without avoidable load shedding.
-- ⚡ **[IntelliPQ: Power Quality Intelligence & Fault Diagnostics](https://github.com/niranjan-crypt/IntelliPQ-AI-Based-Power-Quality-Monitoring-Fault-Detection):** Real-time smart grid DSP engine (FFT, THD, crest factor) featuring a **Neuro-Symbolic Arbitration Layer** that balances deterministic IEEE 1159/519 standards against 1D-CNN + BiLSTM deep temporal models to resolve conflicting alarms.
-- ☀️ **[Physics-Informed Solar MPPT & Markov Weather Modeling](https://github.com/niranjan-crypt/ANN-MARKOV):** Physics-Informed Neural Network (PINN) embedding semiconductor diode equations ($\ln(G), \sqrt{G}$) for single-step zero-oscillation $(V_{mpp}, I_{mpp})$ tracking, stress-tested against a 300-state 2D Markov stochastic weather simulator and Simulink DC-DC converters.
+### 🔹 Embedded & IoT / Cyber-Physical Projects
+- 🦾 **[KinoSync Smart Glove & 3D Digital Twin](https://github.com/niranjan-crypt/KinoSync-Cyber-Physical-Smart-Glove-Telemetry-3D-Digital-Twin-System):** Cyber-Physical wearable system powered by an **ESP32** connecting via **BLE** to a cross-platform **Flutter** dashboard. Features 3D glTF skeletal animation, dominant-finger hysteresis filtering, continuous joint flexion telemetry ($0^\circ \to 90^\circ$), PPG heart-rate tracking, and rehabilitation logging.
 
-### 🦾 Cyber-Physical Systems & IoT
-- 🦾 **[KinoSync: Smart Glove Telemetry & 3D Digital Twin Platform](https://github.com/niranjan-crypt/KinoSync-Cyber-Physical-Smart-Glove-Telemetry-3D-Digital-Twin-System):** Real-time CPS powered by an **ESP32** streaming 5-finger articulation and biometric PPG heart-rate telemetry over **BLE 5.0** to a **Flutter** dashboard. Features 3D glTF skeletal animation, $+12\%$ dominant-finger hysteresis filtering, continuous joint flexion telemetry ($\theta = \text{flexPercent} \times 0.9, 0^\circ \to 90^\circ$), and clinical rehabilitation session logging.
-
-### 👁️ Computer Vision, Biometrics & XAI
-- 👁️ **[Hyperspectral Face Identification & Explainable AI (XAI)](https://github.com/niranjan-crypt/Hyperspectral-Face-Identification-XAI):** Anti-spoofing biometrics utilizing 1200+ contiguous spectral bands (400–1000 nm). Features 6-objective metaheuristic band selection (PSO/GA/GWO) down to 5–20 bands, UISM-Net with ArcFace loss on $\mathbb{S}^{127}$, dual XAI (Spectral SHAP + Spatial Grad-CAM++), and sub-50ms INT8 deployment on Raspberry Pi 4.
-- 🔍 **[Hybrid Vision for Power Transmission Fault Detection](https://github.com/niranjan-crypt/Hybrid-Computer-Vision-and-Deep-Learning-for-Automated-Power-Transmission-Fault-Detection):** Autonomous aerial grid inspection benchmarking classical vision (Hough Circles for insulator disc faults, HSV morphological thresholding for corrosion, GLCM/HOG) against deep transfer learning backbones (AlexNet, VGG16, InceptionV3, ResNet50).
-
-### ⚙️ Systems & Theoretical Computer Science
-- 🚗 **[TOC-AV: Formal Verification System for Autonomous Vehicles](https://github.com/niranjan-crypt/Computation-and-Compiler-design):** Formal automata verification proving safety-critical autonomous parking sequences ($\text{SEARCH}^+ \to \text{STOP} \to \text{REVERSE} \to \text{ALIGN} \to \text{PARK}$) via Deterministic Finite Automata (DFA), NFAs with $\epsilon$-transitions, Timed Automata ($\Delta T$ emergency braking latency), and Pushdown Automata in CNF.
+### 🔹 Software Development & Systems Projects
+- ⚙️ **[Computation & Compiler Design](https://github.com/niranjan-crypt/Computation-and-Compiler-design):** Finite state machines (DFA/NFA), tokenizers, recursive-descent parsers, and Abstract Syntax Tree (AST) generators in JavaScript.
 
 ---
 
