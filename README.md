@@ -1,11 +1,11 @@
 <div align="center">
 
   <!-- Dynamic Cyber Waving Banner Graphic (Fixed: No XML entity ampersand) -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:090d16,35:6366f1,70:06b6d4,100:10b981&height=220&section=header&text=Niranjan%20Krishnakumar&fontSize=42&fontAlignY=36&fontColor=ffffff&desc=Electrical%20and%20Computer%20Engineering%20%E2%80%A2%20Computer%20Vision%20%E2%80%A2%20Edge%20AI&descAlignY=58&descAlign=50&descSize=18" width="100%" alt="Niranjan Krishnakumar Banner" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:090d16,35:6366f1,70:06b6d4,100:10b981&height=220&section=header&text=Niranjan%20Krishnakumar&fontSize=42&fontAlignY=36&fontColor=ffffff&desc=Electrical%20and%20Computer%20Engineer%20%E2%80%A2%20Computer%20Vision%20%E2%80%A2%20Edge%20AI&descAlignY=58&descAlign=50&descSize=18" width="100%" alt="Niranjan Krishnakumar Banner" />
 
   <!-- Animated Typing Title (Cleaned) -->
   <a href="https://github.com/niranjan-crypt">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&pause=1000&color=38BDF8&center=true&vCenter=true&width=780&lines=Electrical+and+Computer+Engineering+%5BELC%5D;Computer+Vision+and+Deep+Learning+Researcher;Spectral-Spatial+3D-CNNs+and+Explainable+AI;Published+Author+in+IEEE+EPREC-2026+and+SPICES-2026;Cyber-Physical+Wearables+and+Real-Time+3D+Digital+Twins;Physics-Informed+Neural+Nets+and+DSP+Analytics" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&pause=1000&color=38BDF8&center=true&vCenter=true&width=780&lines=Electrical+and+Computer+Engineer+%5BELC%5D;Computer+Vision+and+Deep+Learning+Researcher;Spectral-Spatial+3D-CNNs+and+Explainable+AI;Published+Author+in+IEEE+EPREC-2026+and+SPICES-2026;Cyber-Physical+Wearables+and+Real-Time+3D+Digital+Twins;Physics-Informed+Neural+Nets+and+DSP+Analytics" alt="Typing SVG" />
   </a>
 
   <!-- Personal Action Badges -->
