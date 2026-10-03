@@ -5,7 +5,7 @@
 
   <!-- Animated Typing Title (Cleaned) -->
   <a href="https://github.com/niranjan-crypt">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&pause=1000&color=38BDF8&center=true&vCenter=true&width=780&lines=Electrical+and+Computer+Engineer+%5BELC%5D;Computer+Vision+and+Deep+Learning+Researcher;Spectral-Spatial+3D-CNNs+and+Explainable+AI;Published+Author+in+IEEE+EPREC-2026+and+SPICES-2026;Cyber-Physical+Wearables+and+Real-Time+3D+Digital+Twins;Physics-Informed+Neural+Nets+and+DSP+Analytics" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&pause=1000&color=38BDF8&center=true&vCenter=true&width=780&lines=Computer+Vision+and+Deep+Learning+Researcher;Spectral-Spatial+3D-CNNs+and+Explainable+AI;Published+Author+in+IEEE+EPREC-2026+and+SPICES-2026;Cyber-Physical+Wearables+and+Real-Time+3D+Digital+Twins;Physics-Informed+Neural+Nets+and+DSP+Analytics" alt="Typing SVG" />
   </a>
 
   <!-- Personal Action Badges -->
