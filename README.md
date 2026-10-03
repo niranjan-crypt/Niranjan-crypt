@@ -1,11 +1,14 @@
 <div align="center">
 
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:090d16,35:6366f1,70:06b6d4,100:10b981&height=220&section=header&text=Niranjan%20Krishnakumar&fontSize=42&fontAlignY=36&fontColor=ffffff&desc=Electrical%20%26%20Computer%20Engineering%20%E2%80%A2%20Computer%20Vision%20%E2%80%A2%20Edge%20AI&descAlignY=58&descAlign=50&descSize=18" width="100%" alt="Niranjan Krishnakumar Banner" />
+  <!-- Dynamic Cyber Waving Banner Graphic (Fixed: No XML entity ampersand) -->
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:090d16,35:6366f1,70:06b6d4,100:10b981&height=220&section=header&text=Niranjan%20Krishnakumar&fontSize=42&fontAlignY=36&fontColor=ffffff&desc=Electrical%20and%20Computer%20Engineering%20%E2%80%A2%20Computer%20Vision%20%E2%80%A2%20Edge%20AI&descAlignY=58&descAlign=50&descSize=18" width="100%" alt="Niranjan Krishnakumar Banner" />
 
+  <!-- Animated Typing Title (Cleaned) -->
   <a href="https://github.com/niranjan-crypt">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&pause=1000&color=38BDF8&center=true&vCenter=true&width=780&lines=Electrical+%26+Computer+Engineering+%5BELC%5D+@+Amrita;Computer+Vision+%26+Deep+Learning+Researcher;Spectral-Spatial+3D-CNNs+%26+Explainable+AI;Published+Author+in+IEEE+EPREC-2026+%26+SPICES-2026;Cyber-Physical+Wearables+%26+Real-Time+3D+Digital+Twins;Physics-Informed+Neural+Nets+%26+DSP+Analytics" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&pause=1000&color=38BDF8&center=true&vCenter=true&width=780&lines=Electrical+and+Computer+Engineering+%5BELC%5D+@+Amrita;Computer+Vision+and+Deep+Learning+Researcher;Spectral-Spatial+3D-CNNs+and+Explainable+AI;Published+Author+in+IEEE+EPREC-2026+and+SPICES-2026;Cyber-Physical+Wearables+and+Real-Time+3D+Digital+Twins;Physics-Informed+Neural+Nets+and+DSP+Analytics" alt="Typing SVG" />
   </a>
 
+  <!-- Personal Action Badges -->
   <p align="center">
     <a href="https://niranjan-crypt.github.io" target="_blank">
       <img src="https://img.shields.io/badge/Live_Portfolio-niranjan--crypt.github.io-00f2fe?style=for-the-badge&logo=googlechrome&logoColor=black" alt="Portfolio" />
@@ -32,7 +35,7 @@
 
 Welcome! 👋
 
-I am an **Electrical and Computer Engineering (ELC)** undergraduate (B.Tech, expected 2027) at **Amrita Vishwa Vidyapeetham, Coimbatore** (CGPA: 7.42). My work operates at the convergence of **high-dimensional sensor physics, machine learning representations, and embedded silicon execution**.
+I am an **Electrical and Computer Engineering (ELC)** undergraduate (B.Tech, expected 2027) at **Amrita Vishwa Vidyapeetham, Coimbatore** . My work operates at the convergence of **high-dimensional sensor physics, machine learning representations, and embedded silicon execution**.
 
 Rather than treating AI as an isolated abstraction or hardware as a passive peripheral, I engineer unified systems: from writing bare-metal register routines and streaming BLE 5.0 kinematic telemetry on ESP32 microcontrollers, to designing 3D convolutional networks on 1200+ hyperspectral bands, embedding semiconductor diode physics into neural architectures (PINNs), and formulating non-convex metaheuristic optimization algorithms for electrical power grids.
 
@@ -50,14 +53,15 @@ Rather than treating AI as an isolated abstraction or hardware as a passive peri
 ### ⚡ [Hybrid Optimization for Congestion Management in Deregulated Power Systems](https://github.com/niranjan-crypt/Hybrid-Optimization-for-Congestion-Management-in-Deregulated-Power-Systems)
 - **Conference:** 6th International Conference on Electric Power and Renewable Energy (EPREC-2026), IIT Bhilai
 - **Publisher:** IEEE | **DOI:** [10.1109/EPREC66546.2026.11412040](https://doi.org/10.1109/EPREC66546.2026.11412040)
-- Formulated a constrained DC-OPF sensitivity framework (C = A · B) on IEEE 14-bus and 30-bus systems.
-- Designed a novel tri-hybrid metaheuristic combining Orca (OOA), Krill Herd (KHA), and Spotted Hyena (SHO) algorithms.
+- Formulated a constrained DC-OPF sensitivity framework (C = A · B) on IEEE 14-bus and 30-bus transmission networks.
+- Designed a novel tri-hybrid metaheuristic combining **Orca Optimization Algorithm (OOA)**, **Krill Herd Algorithm (KHA)**, and **Spotted Hyena Optimizer (SHO)** with stagnation diversification.
+- Achieved safe transmission line overload relief with minimal generator redispatch deviation and zero avoidable load shedding.
 
 ### ☀️ [Physics-Informed ANN-Based MPPT with Markov-Chain Validation](https://github.com/niranjan-crypt/Physics-Informed-ANN-Based-MPPT-with-Markov-Chain-Based-Dynamic-Validation-for-Photovoltaic-Systems)
 - **Conference:** IEEE International Conference on Signal Processing, Informatics, Communication and Energy Systems (SPICES 2026)
 - **Status:** Accepted for Presentation | **Publisher:** IEEE
-- Constructed 6 physically derived semiconductor diode features into an ANN, enabling single-step zero-oscillation MPPT.
-- Achieved R^2 = 0.9994, >99.5% tracking efficiency, and settling times under 5 ms in simulation.
+- Constructed 6 physically derived semiconductor diode features into an Artificial Neural Network, enabling single-step zero-oscillation Maximum Power Point Tracking (MPPT).
+- Stress-tested controllers with a 300-state 2D Markov chain stochastic weather simulator; achieved R^2 = 0.9994, >99.5% tracking efficiency, and settling times under 5 ms in simulation.
 
 ---
 
