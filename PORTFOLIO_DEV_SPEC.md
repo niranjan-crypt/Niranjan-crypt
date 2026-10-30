@@ -250,3 +250,5 @@ The website must be visually extraordinary, technically sophisticated, highly in
 5. Detailed and accessible project knowledge.
 6. Premium typography and layouts.
 7. Professional technical credibility.
+
+The final result should feel custom-designed, art-directed and engineered specifically as a distinctive personal portfolio — not generated from a conventional developer portfolio template.
