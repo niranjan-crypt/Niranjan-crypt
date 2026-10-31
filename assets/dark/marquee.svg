@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 56" width="1200" height="56">
+<defs><linearGradient id="f"><stop offset="0" stop-color="#000"/><stop offset=".08" stop-color="#fff"/><stop offset=".92" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>
+<mask id="m"><rect width="1200" height="56" fill="url(#f)"/></mask></defs>
+<rect x=".5" y=".5" width="1199" height="55" rx="12" fill="#0B1226" stroke="#67E8F9" stroke-opacity=".25"/>
+<g mask="url(#m)"><g style="font-family:'JetBrains Mono','SF Mono',Consolas,'Courier New',monospace" font-size="16" fill="#67E8F9" letter-spacing=".4">
+<animateTransform attributeName="transform" type="translate" from="0 0" to="-2295 0" dur="40s" repeatCount="indefinite"/>
+<text x="0" y="34" textLength="2295">PYTHON   ◆   C++   ◆   MATLAB   ◆   PYTORCH   ◆   TENSORFLOW   ◆   OPENCV   ◆   FLOWER   ◆   POSTGRESQL   ◆   DOCKER   ◆   ESP32   ◆   STM32   ◆   FLUTTER   ◆   AWS   ◆   SIMULINK   ◆   SHAP   ◆   LIME   ◆   GRAD-CAM++   ◆   </text><text x="2295" y="34" textLength="2295">PYTHON   ◆   C++   ◆   MATLAB   ◆   PYTORCH   ◆   TENSORFLOW   ◆   OPENCV   ◆   FLOWER   ◆   POSTGRESQL   ◆   DOCKER   ◆   ESP32   ◆   STM32   ◆   FLUTTER   ◆   AWS   ◆   SIMULINK   ◆   SHAP   ◆   LIME   ◆   GRAD-CAM++   ◆   </text><text x="4590" y="34" textLength="2295">PYTHON   ◆   C++   ◆   MATLAB   ◆   PYTORCH   ◆   TENSORFLOW   ◆   OPENCV   ◆   FLOWER   ◆   POSTGRESQL   ◆   DOCKER   ◆   ESP32   ◆   STM32   ◆   FLUTTER   ◆   AWS   ◆   SIMULINK   ◆   SHAP   ◆   LIME   ◆   GRAD-CAM++   ◆   </text></g></g>
+</svg>

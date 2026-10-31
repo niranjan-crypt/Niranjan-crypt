@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 110" width="1200" height="110">
+<defs><linearGradient id="l"><stop offset="0" stop-color="#67E8F9"/><stop offset=".6" stop-color="#8B5CF6"/><stop offset="1" stop-color="#8B5CF6" stop-opacity="0"/></linearGradient></defs>
+<style>.a{animation:in 1.2s ease-out both}@keyframes in{from{opacity:0;transform:translateX(-24px)}to{opacity:1;transform:none}}</style>
+<g class="a"><text x="4" y="30" style="font-family:'JetBrains Mono','SF Mono',Consolas,'Courier New',monospace" font-size="14" letter-spacing="4" fill="#67E8F9">01 / SECTION</text>
+<text x="4" y="76" style="font-family:'Segoe UI',Helvetica,Arial,sans-serif" font-size="40" font-weight="800" letter-spacing="1" fill="#FFFFFF">THE ENGINEER</text></g>
+<text x="1196" y="76" text-anchor="end" style="font-family:'JetBrains Mono','SF Mono',Consolas,'Courier New',monospace" font-size="13" letter-spacing="2" fill="#94A3B8">WHO I AM</text>
+<path d="M4 98H1196" stroke="url(#l)" stroke-width="2" stroke-dasharray="1200" stroke-dashoffset="1200"><animate attributeName="stroke-dashoffset" from="1200" to="0" dur="1.8s" fill="freeze"/></path>
+<circle r="4" fill="#67E8F9"><animateMotion dur="4s" repeatCount="indefinite" path="M4 98H1196"/></circle>
+</svg>

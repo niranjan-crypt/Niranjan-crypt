@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 590 285" width="590" height="285">
+<defs>
+<linearGradient id="s" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="590" y2="285"><stop offset="0" stop-color="#0891B2"/><stop offset=".5" stop-color="#6366F1"/><stop offset="1" stop-color="#0891B2"/><animateTransform attributeName="gradientTransform" type="rotate" from="0 295 142" to="360 295 142" dur="8s" repeatCount="indefinite"/></linearGradient>
+<radialGradient id="rg"><stop offset="0" stop-color="#6366F1" stop-opacity=".5"/><stop offset="1" stop-color="#6366F1" stop-opacity="0"/></radialGradient>
+<clipPath id="c"><rect x="1" y="1" width="588" height="283" rx="20"/></clipPath>
+</defs>
+<rect x="1" y="1" width="588" height="283" rx="20" fill="#FFFFFF"/>
+<g clip-path="url(#c)"><circle cx="550" cy="255" r="120" fill="url(#rg)"><animate attributeName="r" values="100;160;100" dur="5s" repeatCount="indefinite"/></circle></g>
+<rect x="1" y="1" width="588" height="283" rx="20" fill="none" stroke="url(#s)" stroke-width="1.6"/>
+<text x="32" y="46" style="font-family:'JetBrains Mono','SF Mono',Consolas,'Courier New',monospace" font-size="12" letter-spacing="3" fill="#0891B2">PROJECT 03 / 09</text>
+<text x="558" y="48" text-anchor="end" style="font-family:'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" fill="#0891B2">↗<animate attributeName="opacity" values="1;.3;1" dur="2.5s" repeatCount="indefinite"/></text>
+<text x="32" y="92" style="font-family:'Segoe UI',Helvetica,Arial,sans-serif" font-size="27" font-weight="800" fill="#0F172A">Hyperspectral Face ID</text>
+<text x="32" y="120" style="font-family:'JetBrains Mono','SF Mono',Consolas,'Courier New',monospace" font-size="11.5" letter-spacing="2" fill="#475569">SPECTRAL-SPATIAL IDENTIFICATION + XAI</text>
+<path d="M32 132H558" stroke="#0891B2" stroke-opacity=".35"/>
+<text x="32" y="165" style="font-family:'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#0F172A" opacity=".85">1,200+ band hyperspectral data · PUMA band selection</text><text x="32" y="189" style="font-family:'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#0F172A" opacity=".85">3D-CNN features + ArcFace representation</text><text x="32" y="213" style="font-family:'Segoe UI',Helvetica,Arial,sans-serif" font-size="14.5" fill="#0F172A" opacity=".85">SHAP, LIME, Grad-CAM++ · INT8 on Raspberry Pi 4</text><rect x="32" y="233" width="68" height="26" rx="13" fill="none" stroke="#0891B2" stroke-opacity=".6"/><text x="66.0" y="250.5" text-anchor="middle" style="font-family:'JetBrains Mono','SF Mono',Consolas,'Courier New',monospace" font-size="11" letter-spacing="1" fill="#0891B2">3D-CNN</text><rect x="110" y="233" width="76" height="26" rx="13" fill="none" stroke="#0891B2" stroke-opacity=".6"/><text x="148.0" y="250.5" text-anchor="middle" style="font-family:'JetBrains Mono','SF Mono',Consolas,'Courier New',monospace" font-size="11" letter-spacing="1" fill="#0891B2">ARCFACE</text><rect x="196" y="233" width="46" height="26" rx="13" fill="none" stroke="#0891B2" stroke-opacity=".6"/><text x="219.0" y="250.5" text-anchor="middle" style="font-family:'JetBrains Mono','SF Mono',Consolas,'Courier New',monospace" font-size="11" letter-spacing="1" fill="#0891B2">XAI</text>
+</svg>
