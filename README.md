@@ -1,38 +1,72 @@
 
-<!-- ====================================================== -->
-<!--           NIRANJAN KRISHNAKUMAR | GITHUB PROFILE       -->
-<!-- ====================================================== -->
+<!-- ============================================================ -->
+<!-- NIRANJAN KRISHNAKUMAR | ENGINEERING INTELLIGENCE INTERFACE    -->
+<!-- ============================================================ -->
 
-<!-- ==================== HERO SECTION ==================== -->
+<!-- ========================= HERO ============================== -->
 
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:080B16,35:312E81,70:0891B2,100:080B16&text=NIRANJAN%20KRISHNAKUMAR&fontSize=43&fontColor=FFFFFF&fontAlignY=42&desc=ENGINEERING%20INTELLIGENCE%20INTO%20REALITY&descSize=13&descAlignY=61&animation=fadeIn&stroke=38BDF8&strokeWidth=1" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=260&color=0:050816,25:101A38,55:312E81,80:164E63,100:050816&text=NIRANJAN%20KRISHNAKUMAR&fontSize=46&fontColor=FFFFFF&fontAlignY=40&animation=fadeIn&desc=ENGINEERING%20INTELLIGENCE%20INTO%20REALITY&descSize=14&descAlignY=59&stroke=67E8F9&strokeWidth=1" />
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=17&duration=2800&pause=900&color=67E8F9&center=true&vCenter=true&width=850&lines=Electrical+%26+Computer+Engineering;Machine+Learning+%7C+Computer+Vision+%7C+AI;Physics-Informed+Neural+Networks;Embedded+Systems+%7C+Signal+Processing;Building+Intelligence+Beyond+Boundaries." />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=16&duration=2600&pause=900&color=67E8F9&center=true&vCenter=true&width=850&lines=ELECTRICAL+%26+COMPUTER+ENGINEERING;MACHINE+LEARNING+%C3%97+COMPUTER+VISION;PHYSICS-INFORMED+ARTIFICIAL+INTELLIGENCE;DATA+ENGINEERING+%C3%97+INTELLIGENT+SYSTEMS;EMBEDDED+INTELLIGENCE+%C3%97+REAL-WORLD+ENGINEERING" />
 
 <br/><br/>
 
-<img src="https://komarev.com/ghpvc/?username=niranjan-crypt&style=for-the-badge&color=312E81&label=PROFILE+VIEWS" />
-<img src="https://img.shields.io/badge/RESEARCH-DRIVEN-312E81?style=for-the-badge" />
-<img src="https://img.shields.io/badge/ENGINEERING-FOCUSED-0891B2?style=for-the-badge" />
+<a href="https://github.com/niranjan-crypt">
+<img src="https://komarev.com/ghpvc/?username=niranjan-crypt&style=flat-square&color=6366F1&label=PROFILE+VIEWS" />
+</a>
+<img src="https://img.shields.io/badge/RESEARCH-DRIVEN-312E81?style=flat-square" />
+<img src="https://img.shields.io/badge/ENGINEERING-FOCUSED-0891B2?style=flat-square" />
 
 <br/><br/>
 
 <a href="https://github.com/niranjan-crypt/niranjan-crypt.github.io">
-<img src="https://img.shields.io/badge/PORTFOLIO-VISIT-FFFFFF?style=for-the-badge&logo=googlechrome&logoColor=black" />
+<img src="https://img.shields.io/badge/EXPLORE-PORTFOLIO-FFFFFF?style=for-the-badge&logo=googlechrome&logoColor=black" />
 </a>
-<a href="https://github.com/niranjan-crypt">
-<img src="https://img.shields.io/badge/GITHUB-EXPLORE-181717?style=for-the-badge&logo=github&logoColor=white" />
+<a href="https://github.com/niranjan-crypt?tab=repositories">
+<img src="https://img.shields.io/badge/EXPLORE-REPOSITORIES-181717?style=for-the-badge&logo=github&logoColor=white" />
 </a>
+
+<br/><br/>
+
+<sub>COIMBATORE, INDIA · ELECTRICAL & COMPUTER ENGINEERING · B.TECH 2027</sub>
 
 </div>
 
 ---
 
-<!-- ==================== ABOUT SECTION ==================== -->
+<!-- ===================== SYSTEM INITIALIZATION ================ -->
+
+<div align="center">
+
+### SYSTEM INITIALIZATION
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=13&duration=1700&pause=600&color=34D399&center=true&vCenter=true&width=760&lines=%3E+INITIALIZING+NIRANJAN_OS...;%3E+LOADING+COMPUTATIONAL+INTELLIGENCE...;%3E+CONNECTING+ENGINEERING+MODULES...;%3E+LOADING+RESEARCH+ENVIRONMENT...;%3E+SYSTEM+READY_" />
+
+</div>
+
+```text
+┌──────────────────────────────────────────────────────────┐
+│  NIRANJAN_OS                         ENGINEERING PROFILE │
+├──────────────────────────────────────────────────────────┤
+│                                                          │
+│  IDENTITY       Electrical & Computer Engineering       │
+│  SPECIALIZATION AI / ML / Computer Vision / Data         │
+│  RESEARCH       Physics-Informed Intelligence           │
+│  ENGINEERING    Embedded & Cyber-Physical Systems        │
+│  FOCUS          Research · Optimization · Implementation │
+│                                                          │
+│  SYSTEM STATUS  OPERATIONAL                              │
+│                                                          │
+└──────────────────────────────────────────────────────────┘
+```
+
+---
+
+<!-- ========================= ABOUT ============================= -->
 
 <div align="center">
 
@@ -42,46 +76,100 @@
 
 </div>
 
-I am an **Electrical and Computer Engineering undergraduate at Amrita Vishwa Vidyapeetham**, Coimbatore, exploring the intersection of artificial intelligence, mathematical optimization, embedded systems and intelligent engineering.
+I am an **Electrical and Computer Engineering undergraduate at Amrita Vishwa Vidyapeetham**, Coimbatore, working at the intersection of artificial intelligence, mathematical optimization, data engineering and embedded systems.
 
-My work focuses on transforming complex engineering problems into intelligent computational systems — from processing high-dimensional hyperspectral data and designing deep learning architectures to developing physics-informed neural networks and optimizing electrical power systems.
+My approach to engineering is interdisciplinary: understand the physical system, formulate its mathematical representation, develop the computational intelligence and translate it into a practical implementation.
 
-I enjoy working across the complete engineering spectrum: understanding the underlying physics, developing the mathematical model, implementing the algorithm and exploring its execution on real hardware.
+My work spans high-dimensional hyperspectral processing, deep learning architectures, physics-informed neural networks, privacy-preserving distributed learning, scalable data pipelines and intelligent electrical systems.
+
+I am particularly interested in engineering systems where **mathematics, algorithms, physical principles and hardware converge.**
 
 ```python
 class Niranjan:
 
     education = "B.Tech | Electrical & Computer Engineering"
     university = "Amrita Vishwa Vidyapeetham"
+    graduation = 2027
 
     interests = [
         "Artificial Intelligence",
         "Machine Learning",
         "Computer Vision",
+        "Data Engineering",
         "Power Systems",
-        "Embedded Systems",
-        "Signal Processing"
+        "Embedded Intelligence"
     ]
 
     research = [
         "Physics-Informed Neural Networks",
         "Hyperspectral Biometrics",
-        "Metaheuristic Optimization",
-        "Intelligent Energy Systems"
+        "Federated Learning",
+        "Metaheuristic Optimization"
     ]
 
-    philosophy = "Understand the physics. Engineer the intelligence."
+    philosophy = "Understand the system. Engineer the intelligence."
 ```
 
 ---
 
-<!-- ==================== RESEARCH SECTION ==================== -->
+<!-- ===================== ENGINEERING ECOSYSTEM ================ -->
 
 <div align="center">
 
-## 02 / RESEARCH & PUBLICATIONS
+## 02 / ENGINEERING ECOSYSTEM
 
-*Research-driven engineering. Mathematical foundations. Intelligent systems.*
+*One engineering foundation. Multiple computational domains.*
+
+</div>
+
+```mermaid
+flowchart TB
+    A["NIRANJAN KRISHNAKUMAR"]
+
+    A --> B["COMPUTATIONAL INTELLIGENCE"]
+    A --> C["ELECTRICAL ENGINEERING"]
+    A --> D["DATA & SOFTWARE SYSTEMS"]
+
+    B --> E["Machine Learning"]
+    B --> F["Computer Vision"]
+    B --> G["Federated Learning"]
+
+    C --> H["Power Systems"]
+    C --> I["Embedded Systems"]
+    C --> J["Signal Processing"]
+
+    D --> K["Data Engineering"]
+    D --> L["Cloud & Deployment"]
+    D --> M["Software Development"]
+
+    E --> N["INTELLIGENT ENGINEERING"]
+    F --> N
+    G --> N
+    H --> N
+    I --> N
+    J --> N
+    K --> N
+    L --> N
+    M --> N
+
+    classDef main fill:#312E81,color:#fff,stroke:#67E8F9
+    classDef domain fill:#111C35,color:#fff,stroke:#6366F1
+    classDef output fill:#075985,color:#fff,stroke:#67E8F9
+
+    class A main
+    class B,C,D,E,F,G,H,I,J,K,L,M domain
+    class N output
+```
+
+---
+
+<!-- ======================== PUBLICATIONS ======================= -->
+
+<div align="center">
+
+## 03 / RESEARCH & PUBLICATIONS
+
+*Research-driven engineering. Mathematical foundations. Experimental validation.*
 
 </div>
 
@@ -93,15 +181,20 @@ class Niranjan:
 
 **Hybrid Optimization for Congestion Management in Deregulated Power Systems**
 
-- Tri-hybrid metaheuristic optimization.
+<sub>IEEE Publication</sub>
+
+- Constrained DC-OPF sensitivity framework.
 - Orca Optimization Algorithm (OOA).
 - Krill Herd Algorithm (KHA).
 - Spotted Hyena Optimizer (SHO).
-- Constrained DC-OPF sensitivity framework.
+- Tri-hybrid optimization architecture.
+- Power-system congestion management.
 
-**Publication DOI**
+<br/>
 
-[10.1109/EPREC66546.2026.11412040](https://doi.org/10.1109/EPREC66546.2026.11412040)
+<a href="https://doi.org/10.1109/EPREC66546.2026.11412040">
+<img src="https://img.shields.io/badge/VIEW_IEEE_PUBLICATION-0891B2?style=for-the-badge&logo=ieee&logoColor=white" />
+</a>
 
 </td>
 <td width="50%" valign="top">
@@ -110,13 +203,18 @@ class Niranjan:
 
 **Physics-Informed ANN-Based MPPT with Markov-Chain-Based Dynamic Validation for Photovoltaic Systems**
 
-- Semiconductor diode physics-guided ANN.
+<sub>Accepted for presentation</sub>
+
+- Semiconductor diode physics-derived features.
+- Physics-informed ANN.
 - 300-state 2D Markov-chain weather simulator.
 - Dynamic photovoltaic validation.
 - Reported R² = 0.9994.
 - Reported tracking efficiency above 99.5%.
 
-**Status:** Accepted for presentation.
+<br/>
+
+<img src="https://img.shields.io/badge/IEEE_SPICES-ACCEPTED-10B981?style=for-the-badge" />
 
 </td>
 </tr>
@@ -124,219 +222,355 @@ class Niranjan:
 
 ---
 
-<!-- ==================== PROJECTS SECTION ==================== -->
+<!-- ======================== EXPERIENCE ========================= -->
 
 <div align="center">
 
-## 03 / ENGINEERING LABORATORY
+## 04 / INDUSTRY EXPERIENCE
 
-*Selected research, engineering implementations and experimental systems.*
+*Applying engineering principles beyond the laboratory.*
 
 </div>
 
+### LARSEN & TOUBRO — INDUSTRY INTERNSHIP
+
+<sub>2026 · Electrical and Transportation Engineering</sub>
+
+- EV powertrain simulation and analysis.
+- PMSM and BLDC motor-control concepts.
+- DC–DC converter operation.
+- Battery Management System architecture.
+- CAN-based communication.
+- Railway SCADA automation modelling.
+
+### AWS ACADEMY — CLOUD FOUNDATIONS
+
+<sub>February 2026</sub>
+
+- Cloud architecture fundamentals.
+- Compute and storage services.
+- Networking and infrastructure.
+- Cloud security fundamentals.
+
+---
+
+<!-- ========================== PROJECTS ========================= -->
+
+<div align="center">
+
+## 05 / SELECTED ENGINEERING PROJECTS
+
+*From mathematical models to intelligent implementations.*
+
+</div>
+
+### 01 — COMMERCEIQ
+
+**END-TO-END E-COMMERCE DATA ENGINEERING & ANALYTICS**
+
+<a href="https://github.com/niranjan-crypt/CommerceIQ">
+<img src="https://img.shields.io/badge/VIEW_SOURCE-181717?style=flat-square&logo=github&logoColor=white" />
+</a>
+
+<img src="https://img.shields.io/badge/PYTHON-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/POSTGRESQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/DOCKER-2496ED?style=flat-square&logo=docker&logoColor=white" />
+
+- ETL pipeline processing 100,000+ orders and 1.5 million records.
+- PostgreSQL transactional database and dimensional warehouse.
+- Third Normal Form and Kimball star-schema modelling.
+- 22 automated data quality checks.
+- SQL cohort retention and RFM segmentation.
+- Market basket analysis.
+- Query optimization with measured 5.35× speedup.
+- Streamlit analytics dashboard.
+
 <details>
-<summary><b>01 — HYPERSPECTRAL FACE IDENTIFICATION & EXPLAINABLE AI</b></summary>
+<summary><b>TECHNICAL IMPLEMENTATION</b></summary>
 
-`HYPERSPECTRAL IMAGING` `3D-CNN` `ARCFACE` `XAI`
-
-**Real-Time Hyperspectral Human Face Identification Using Spectral-Spatial Feature Fusion and Explainable AI**
-
-- High-dimensional spectral processing across 1,200+ bands.
-- Metaheuristic optimization for informative band selection.
-- Reduction targeting 5–20 informative spectral bands.
-- 3D-CNN spectral-spatial feature extraction.
-- ArcFace-based feature discrimination.
-- SHAP and Grad-CAM++ explainability.
-- Raspberry Pi 4 deployment considerations.
+| Layer | Implementation |
+|---|---|
+| Ingestion | Python ETL |
+| Storage | PostgreSQL |
+| Modelling | 3NF, Star Schema |
+| Analytics | SQL, RFM, Cohorts |
+| Validation | Data Quality Checks |
+| Visualization | Streamlit, Plotly |
+| Infrastructure | Docker |
 
 </details>
 
+---
+
+### 02 — PRIVACY-PRESERVING FEDERATED LEARNING
+
+**DISTRIBUTED LSTM-BASED NEXT-WORD PREDICTION**
+
+<a href="https://github.com/niranjan-crypt/Privacy-Preserving-Federated-Learning-FL-System-for-Text-Prediction">
+<img src="https://img.shields.io/badge/VIEW_SOURCE-181717?style=flat-square&logo=github&logoColor=white" />
+</a>
+
+<img src="https://img.shields.io/badge/FLOWER-FF6F00?style=flat-square" />
+<img src="https://img.shields.io/badge/LSTM-6C3483?style=flat-square" />
+<img src="https://img.shields.io/badge/FEDAVG-0891B2?style=flat-square" />
+
+- Distributed learning across simulated clients.
+- Flower federated learning framework.
+- FedAvg model aggregation.
+- LSTM-based next-word prediction.
+- Local data retention.
+- CPU, RAM, battery and network-based client eligibility.
+- Fernet encryption and PBKDF2-derived keys.
+
 <details>
-<summary><b>02 — INTELLIPQ | AI-BASED POWER QUALITY MONITORING</b></summary>
+<summary><b>TECHNICAL IMPLEMENTATION</b></summary>
 
-`DSP` `1D-CNN` `BiLSTM` `NEURO-SYMBOLIC AI`
+| Layer | Implementation |
+|---|---|
+| Framework | Flower |
+| Model | LSTM |
+| Aggregation | FedAvg |
+| Privacy | Local training |
+| Security | Fernet, PBKDF2 |
+| Monitoring | Resource-aware client selection |
 
-An intelligent power quality monitoring framework integrating digital signal processing and deep learning.
+</details>
 
-- FFT-based frequency-domain analysis.
-- RMS and Total Harmonic Distortion computation.
-- 1D-CNN and BiLSTM architectures.
+---
+
+### 03 — HYPERSPECTRAL FACE IDENTIFICATION & XAI
+
+**SPECTRAL-SPATIAL HUMAN IDENTIFICATION**
+
+<a href="https://github.com/niranjan-crypt/Hyperspectral-Face-Identification-XAI">
+<img src="https://img.shields.io/badge/VIEW_SOURCE-181717?style=flat-square&logo=github&logoColor=white" />
+</a>
+
+<img src="https://img.shields.io/badge/3D--CNN-312E81?style=flat-square" />
+<img src="https://img.shields.io/badge/ARCFACE-0891B2?style=flat-square" />
+<img src="https://img.shields.io/badge/EXPLAINABLE_AI-0F766E?style=flat-square" />
+
+- Hyperspectral imaging across 1,200+ bands.
+- RGB baseline and hyperspectral research tracks.
+- PUMA-based optimal spectral band selection.
+- Three-band compact spectral subset exploration.
+- Spectral-spatial feature extraction.
+- ArcFace-based representation learning.
+- SHAP, LIME and Grad-CAM++ explainability.
+- INT8 deployment targeting Raspberry Pi 4.
+
+<details>
+<summary><b>TECHNICAL IMPLEMENTATION</b></summary>
+
+| Component | Method |
+|---|---|
+| Input | Hyperspectral data |
+| Feature extraction | 3D-CNN |
+| Band selection | PUMA optimization |
+| Representation | ArcFace |
+| Explainability | SHAP, LIME, Grad-CAM++ |
+| Deployment target | Raspberry Pi 4 |
+
+</details>
+
+---
+
+### 04 — INTELLIPQ
+
+**AI-BASED POWER QUALITY MONITORING & FAULT DETECTION**
+
+<a href="https://github.com/niranjan-crypt/IntelliPQ-AI-Based-Power-Quality-Monitoring-Fault-Detection">
+<img src="https://img.shields.io/badge/VIEW_SOURCE-181717?style=flat-square&logo=github&logoColor=white" />
+</a>
+
+<img src="https://img.shields.io/badge/DSP-0891B2?style=flat-square" />
+<img src="https://img.shields.io/badge/BiLSTM-312E81?style=flat-square" />
+<img src="https://img.shields.io/badge/DOCKER-2496ED?style=flat-square&logo=docker&logoColor=white" />
+
+- Multi-modal waveform and CSV ingestion.
+- FFT, RMS, THD and Crest Factor analysis.
+- IEEE 1159 and IEEE 519 rule evaluation.
+- 1D-CNN and BiLSTM classification.
 - Neuro-symbolic decision arbitration.
-- IEEE 1159 and IEEE 519 standard-based evaluation.
+- Prescriptive engineering action engine.
+- Docker deployment and automated testing.
 
-</details>
+---
 
-<details>
-<summary><b>03 — PHYSICS-INFORMED SOLAR MPPT</b></summary>
+### 05 — POWER TRANSMISSION FAULT DIAGNOSIS
 
-`PHYSICS-INFORMED ML` `ANN` `MARKOV CHAINS`
+**COMPUTER VISION FOR TRANSMISSION INFRASTRUCTURE INSPECTION**
 
-A physics-guided neural MPPT architecture incorporating photovoltaic semiconductor characteristics into machine learning.
+<a href="https://github.com/niranjan-crypt/Hybrid-Computer-Vision-and-Deep-Learning-for-Automated-Power-Transmission-Fault-Detection">
+<img src="https://img.shields.io/badge/VIEW_SOURCE-181717?style=flat-square&logo=github&logoColor=white" />
+</a>
+
+- Drone imagery-based fault identification.
+- Transfer-learning CNN benchmarking.
+- Hough Circle Transform.
+- HOG and GLCM feature extraction.
+- Classical CV vs deep learning comparison.
+- Reported classification accuracy: 82%.
+
+---
+
+### 06 — PHYSICS-INFORMED SOLAR MPPT
+
+**PHYSICS-GUIDED NEURAL MAXIMUM POWER POINT TRACKING**
+
+<img src="https://img.shields.io/badge/MATLAB-0076A8?style=flat-square&logo=mathworks&logoColor=white" />
+<img src="https://img.shields.io/badge/ANN-312E81?style=flat-square" />
+<img src="https://img.shields.io/badge/MARKOV_CHAINS-0891B2?style=flat-square" />
 
 - Semiconductor diode physics-derived features.
 - Physics-informed ANN architecture.
 - 45,000-sample dataset.
 - 300-state 2D Markov-chain stochastic weather simulation.
 - Dynamic environmental validation.
-- MATLAB implementation.
+- Reported simulation R² = 0.9994.
 
-</details>
+---
 
-<details>
-<summary><b>04 — POWER TRANSMISSION FAULT DIAGNOSIS</b></summary>
+### 07 — KINOSYNC
 
-`COMPUTER VISION` `CNN` `IMAGE PROCESSING`
+**SMART GLOVE & INTERACTIVE 3D DIGITAL TWIN**
 
-Drone imagery-based fault identification and infrastructure inspection.
+<img src="https://img.shields.io/badge/ESP32-E7352C?style=flat-square&logo=espressif&logoColor=white" />
+<img src="https://img.shields.io/badge/FLUTTER-02569B?style=flat-square&logo=flutter&logoColor=white" />
+<img src="https://img.shields.io/badge/BLE_5.0-0082FC?style=flat-square" />
 
-- Transfer-learning CNN benchmarking.
-- Hough Circle Transform.
-- Histogram of Oriented Gradients (HOG).
-- Gray-Level Co-occurrence Matrix (GLCM).
-- Classical computer vision vs deep learning comparison.
-- Reported classification accuracy: 82%.
-
-</details>
-
-<details>
-<summary><b>05 — KINOSYNC | SMART GLOVE & 3D DIGITAL TWIN</b></summary>
-
-`ESP32` `BLE 5.0` `FLUTTER` `EMBEDDED SYSTEMS`
-
-A wearable sensing and interactive digital twin platform.
-
-- ESP32-based sensor acquisition.
+- ESP32 sensor acquisition.
 - Continuous joint-flexion monitoring.
 - BLE 5.0 GATT telemetry.
-- Interactive Flutter-based 3D digital twin.
-- PPG-based pulse monitoring.
+- Interactive Flutter 3D digital twin.
+- PPG pulse monitoring.
 
-</details>
+---
 
-<details>
-<summary><b>06 — HYBRID PSO-GA MULTILEVEL OTSU MRI SEGMENTATION</b></summary>
+### 08 — HYBRID PSO-GA MRI SEGMENTATION
 
-`METAHEURISTICS` `IMAGE PROCESSING` `RANDOM FOREST`
+**MULTILEVEL OTSU THRESHOLD OPTIMIZATION**
 
 - Hybrid Particle Swarm Optimization and Genetic Algorithm.
-- Multilevel Otsu threshold optimization.
-- GLCM-based texture extraction.
+- Multilevel Otsu thresholding.
+- GLCM texture feature extraction.
 - Random Forest validation.
 
-</details>
+---
 
-<details>
-<summary><b>07 — TOC-AV | FORMAL SAFETY VERIFICATION FOR AUTONOMOUS VEHICLES</b></summary>
+### 09 — TOC-AV
 
-`FORMAL METHODS` `AUTOMATA THEORY` `SAFETY VERIFICATION`
+**FORMAL SAFETY VERIFICATION FOR AUTONOMOUS VEHICLES**
 
-- Deterministic Finite Automata (DFA).
-- Nondeterministic Finite Automata (NFA).
+- Deterministic and Nondeterministic Finite Automata.
 - Timed Automata.
 - Context-Free Grammars in Chomsky Normal Form.
 - Formal collision-free autonomous parking verification.
 
-</details>
-
-<details>
-<summary><b>08 — BATTERY MANAGEMENT SYSTEM</b></summary>
-
-`STM32F401RE` `EMBEDDED C` `EV SYSTEMS`
-
-Embedded battery management system development.
-
-- STM32F401RE microcontroller.
-- Battery monitoring and embedded control.
-- Battery management system architecture.
-- EV powertrain-related engineering.
-
-</details>
-
 ---
 
-<!-- ==================== TECHNICAL ARSENAL ==================== -->
+<!-- ======================= TECHNICAL ARSENAL =================== -->
 
 <div align="center">
 
-## 04 / TECHNICAL ARSENAL
+## 06 / TECHNICAL ARSENAL
 
-*Tools are instruments. Engineering is the discipline.*
+*An interdisciplinary toolkit for intelligent engineering.*
 
 <br/>
 
-### PROGRAMMING LANGUAGES
+### 01 — PROGRAMMING LANGUAGES
 
 <img src="https://skillicons.dev/icons?i=python,cpp,c,matlab,bash,dart&theme=dark" />
 
+<sub>Python · C++ · C · MATLAB · Bash · Dart · SQL</sub>
+
 <br/><br/>
 
-### ARTIFICIAL INTELLIGENCE & MACHINE LEARNING
+### 02 — MACHINE LEARNING & DEEP LEARNING
 
 <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv,sklearn&theme=dark" />
 
+<sub>ANN · CNN · 1D-CNN · 3D-CNN · BiLSTM · Transfer Learning · Federated Learning · Flower · FedAvg</sub>
+
 <br/><br/>
 
-### DATA SCIENCE & SCIENTIFIC COMPUTING
+### 03 — DATA ENGINEERING & ANALYTICS
+
+<img src="https://skillicons.dev/icons?i=postgres,mysql,docker&theme=dark" />
+
+<br/>
+
+<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
+<img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
+<img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" />
+<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
+
+<br/>
+
+<sub>ETL / ELT · Data Cleansing · Data Validation · SQL Optimization · 3NF · Star Schema · RFM · Cohort Analysis · Market Basket Analysis · Docker Compose</sub>
+
+<br/><br/>
+
+### 04 — COMPUTER VISION & EXPLAINABLE AI
+
+<img src="https://skillicons.dev/icons?i=opencv,pytorch,tensorflow&theme=dark" />
+
+<br/>
+
+<sub>Hyperspectral Imaging · Spectral-Spatial Fusion · ArcFace · HOG · GLCM · LBP · Hough Transform · SHAP · LIME · Grad-CAM++</sub>
+
+<br/><br/>
+
+### 05 — SCIENTIFIC COMPUTING & OPTIMIZATION
 
 <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
-<img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" />
 <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" />
-<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" />
-<img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+
+<br/>
+
+<sub>PSO · GA · OOA · KHA · SHO · PUMA · Markov Chains · Numerical Optimization · Mathematical Modelling</sub>
 
 <br/><br/>
 
-### EMBEDDED SYSTEMS & HARDWARE
+### 06 — EMBEDDED SYSTEMS & HARDWARE
 
 <img src="https://skillicons.dev/icons?i=arduino,raspberrypi&theme=dark" />
 
-<br/><br/>
+<br/>
 
 <img src="https://img.shields.io/badge/ESP32-E7352C?style=for-the-badge&logo=espressif&logoColor=white" />
 <img src="https://img.shields.io/badge/STM32-03234B?style=for-the-badge&logo=stmicroelectronics&logoColor=white" />
 <img src="https://img.shields.io/badge/BLE_5.0-0082FC?style=for-the-badge&logo=bluetooth&logoColor=white" />
-<img src="https://img.shields.io/badge/GATT-2563EB?style=for-the-badge" />
+
+<br/>
+
+<sub>GATT · Sensor Acquisition · Embedded C · Firmware · Real-Time Telemetry · Edge AI · Digital Twins · PPG</sub>
 
 <br/><br/>
 
-### SOFTWARE & DEVELOPMENT
+### 07 — SOFTWARE & CLOUD
 
-<img src="https://skillicons.dev/icons?i=git,github,vscode,flutter,linux,aws&theme=dark" />
+<img src="https://skillicons.dev/icons?i=git,github,vscode,linux,flutter,aws,docker&theme=dark" />
+
+<br/>
+
+<sub>Git · GitHub · VS Code · Linux · Flutter · AWS Cloud Foundations · Docker · Docker Compose · CI/CD</sub>
 
 <br/><br/>
 
-### ENGINEERING & SIMULATION
+### 08 — ELECTRICAL & ENERGY SYSTEMS
 
 <img src="https://img.shields.io/badge/MATLAB-0076A8?style=for-the-badge&logo=mathworks&logoColor=white" />
 <img src="https://img.shields.io/badge/Simulink-FF6D00?style=for-the-badge&logo=mathworks&logoColor=white" />
-<img src="https://img.shields.io/badge/Digital_Signal_Processing-0891B2?style=for-the-badge" />
-<img src="https://img.shields.io/badge/FFT-4338CA?style=for-the-badge" />
-<img src="https://img.shields.io/badge/THD_Analysis-0F766E?style=for-the-badge" />
-<img src="https://img.shields.io/badge/EV_Powertrains-334155?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Battery_Management-166534?style=for-the-badge" />
+
+<br/>
+
+<sub>Power Systems · DC-OPF · PTDF · MPPT · DSP · FFT · THD · RMS · PMSM · BLDC · BMS · DC-DC Converters · CAN · SCADA</sub>
 
 <br/><br/>
 
-### ADVANCED AI & RESEARCH TECHNIQUES
-
-<img src="https://img.shields.io/badge/Computer_Vision-312E81?style=flat-square" />
-<img src="https://img.shields.io/badge/3D--CNN-312E81?style=flat-square" />
-<img src="https://img.shields.io/badge/Transfer_Learning-312E81?style=flat-square" />
-<img src="https://img.shields.io/badge/Physics--Informed_ML-075985?style=flat-square" />
-<img src="https://img.shields.io/badge/ANN-075985?style=flat-square" />
-<img src="https://img.shields.io/badge/BiLSTM-075985?style=flat-square" />
-<img src="https://img.shields.io/badge/SHAP-0F766E?style=flat-square" />
-<img src="https://img.shields.io/badge/Grad--CAM++-0F766E?style=flat-square" />
-<img src="https://img.shields.io/badge/HOG-334155?style=flat-square" />
-<img src="https://img.shields.io/badge/GLCM-334155?style=flat-square" />
-<img src="https://img.shields.io/badge/Metaheuristic_Optimization-4338CA?style=flat-square" />
-<img src="https://img.shields.io/badge/Markov_Chain_Models-4338CA?style=flat-square" />
-<img src="https://img.shields.io/badge/ArcFace-4338CA?style=flat-square" />
-<img src="https://img.shields.io/badge/FFT_Analysis-075985?style=flat-square" />
-
-<br/><br/>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:0891B2,50:6366F1,100:0891B2" />
+<img width="90%" src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:0891B2,50:6366F1,100:8B5CF6" />
 
 <sub>CONTINUOUS LEARNING · EXPERIMENTATION · ENGINEERING</sub>
 
@@ -344,88 +578,53 @@ Embedded battery management system development.
 
 ---
 
-<!-- ==================== CONTRIBUTION SECTION ==================== -->
+<!-- ========================== RESEARCH APPROACH ================ -->
 
 <div align="center">
 
-## 05 / CONTRIBUTION MATRIX
+## 07 / HOW I APPROACH ENGINEERING
 
-*Every contribution is a step in a larger engineering journey.*
-
-<br/>
-
-<img width="95%" src="https://raw.githubusercontent.com/niranjan-crypt/niranjan-crypt/output/github-contribution-grid-snake-dark.svg" />
+*From problem formulation to implementation.*
 
 </div>
 
----
+```text
+01  PROBLEM IDENTIFICATION
+    Understand the physical or computational problem.
 
-<!-- ==================== CURRENT EXPLORATION ==================== -->
+02  MATHEMATICAL MODELLING
+    Establish governing principles and constraints.
 
-<div align="center">
+03  ALGORITHM DESIGN
+    Develop models, architectures and optimization strategies.
 
-## 06 / CURRENT EXPLORATION
+04  EXPERIMENTAL VALIDATION
+    Benchmark, evaluate and investigate limitations.
 
-*Questions that drive the next experiment.*
+05  SYSTEM IMPLEMENTATION
+    Integrate software, computation and hardware.
 
-</div>
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**01 — INTELLIGENT SYSTEMS**
-
-- High-dimensional representation learning
-- Physics-informed machine learning
-- Explainable artificial intelligence
-
-</td>
-<td width="50%" valign="top">
-
-**02 — COMPUTATIONAL ENGINEERING**
-
-- Metaheuristic optimization
-- Intelligent power systems
-- Mathematical modelling
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-**03 — COMPUTER VISION**
-
-- Spectral-spatial learning
-- Biometric intelligence
-- Deep visual representation
-
-</td>
-<td width="50%" valign="top">
-
-**04 — HARDWARE INTELLIGENCE**
-
-- Embedded AI
-- Edge deployment
-- Real-time sensor systems
-
-</td>
-</tr>
-</table>
+06  PERFORMANCE OPTIMIZATION
+    Improve efficiency, reliability and deployment readiness.
+```
 
 ---
 
-<!-- ==================== CONNECT SECTION ==================== -->
+<!-- ========================== CONNECT ========================== -->
 
 <div align="center">
 
-## 07 / BEYOND THE REPOSITORY
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&height=3&color=0:06B6D4,50:6366F1,100:8B5CF6" />
 
-*Engineering is not just about building what is possible. It is about questioning what should be possible.*
+## 08 / BEYOND THE REPOSITORY
 
 <br/>
 
-Interested in research collaborations, intelligent engineering systems, computer vision, machine learning and embedded development.
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=3200&pause=1000&color=67E8F9&center=true&vCenter=true&width=800&lines=THINK+BEYOND+CONVENTIONAL+SYSTEMS.;BUILD+WITH+MATHEMATICAL+PRECISION.;ENGINEER+INTELLIGENCE+INTO+REALITY." />
+
+<br/><br/>
+
+Open to research collaborations, machine learning opportunities, data engineering challenges and interdisciplinary engineering projects.
 
 <br/><br/>
 
@@ -434,7 +633,7 @@ Interested in research collaborations, intelligent engineering systems, computer
 </a>
 
 <a href="https://github.com/niranjan-crypt/niranjan-crypt.github.io">
-<img src="https://img.shields.io/badge/PORTFOLIO-EXPLORE-0891B2?style=for-the-badge&logo=googlechrome&logoColor=white" />
+<img src="https://img.shields.io/badge/PORTFOLIO-VISIT-0891B2?style=for-the-badge&logo=googlechrome&logoColor=white" />
 </a>
 
 <a href="https://www.linkedin.com/">
@@ -443,12 +642,18 @@ Interested in research collaborations, intelligent engineering systems, computer
 
 <br/><br/>
 
-**"Understand the system. Challenge the assumptions. Engineer the solution."**
+**NIRANJAN KRISHNAKUMAR**
+
+<sub>ELECTRICAL & COMPUTER ENGINEERING · COIMBATORE, INDIA</sub>
 
 <br/><br/>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:080B16,40:312E81,75:0891B2,100:080B16&height=120&section=footer" />
+*"Understand the system. Challenge the assumptions. Engineer the solution."*
+
+<br/><br/>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:050816,30:111C3D,65:312E81,100:0891B2&height=140&section=footer" />
 
 </div>
 
-<!-- ======================== END ======================== -->
+<!-- =========================== END ============================== -->
