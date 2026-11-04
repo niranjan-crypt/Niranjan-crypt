@@ -5,7 +5,7 @@ from xml.sax.saxutils import escape as E
 HERE = os.path.dirname(os.path.abspath(__file__))
 SI = json.load(open(os.path.join(HERE, "icons.json")))
 BLUE, LIME, LIME2, EDGE, CARD = "#00E5FF", "#C6FF00", "#E4FF4D", "#12385A", "#05080D"
-MONO = "font-family:'JetBrains Mono','SF Mono',Menlo,Consolas,monospace"
+MONO = "font-family:'NK Mono','JetBrains Mono','SF Mono',Menlo,Consolas,monospace"
 
 # 24x24 line glyphs for tools / techniques that have no brand logo
 GL = {
