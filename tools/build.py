@@ -97,7 +97,7 @@ EASE = 'calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"
 
 def wave_d(base, amp, lam, ph, W=1200):
     pts = []
-    for x in range(-20, W + 21, 20):
+    for x in range(-20, W + 21, 8):
         t = .35 + .65 * math.sin(math.pi * min(max(x, 0), W) / W)
         y = base + amp * t * math.sin(2 * math.pi * x / lam + ph) + amp * .35 * t * math.sin(2 * math.pi * x / (lam * .53) + ph * 1.7)
         pts.append(f"{x} {y:.1f}")
@@ -160,16 +160,15 @@ def hero():
         cx = x + a / 2; x += a + track
         if c != " ":
             letters += f'<text class="ch" style="animation-delay:{.25 + i*.04:.2f}s;{SANS}" x="{cx:.1f}" y="{y}" text-anchor="middle" font-size="{size}" font-weight="800" fill="#FFFFFF">{c}</text>'
-    tl = "".join(f'<text class="tg" style="animation-delay:{i*4}s;{ITALIC}" x="600" y="318" text-anchor="middle" font-size="30" font-weight="400" letter-spacing=".6" fill="{CYAN}">{E(t)}</text>' for i, t in enumerate(TAGLINES))
+    tl = "".join(f'<text class="tg" style="animation-delay:{i*4}s;{SANS}" x="600" y="290" text-anchor="middle" font-size="25" font-weight="400" letter-spacing="1" fill="#7DD3FC">{E(t)}</text>' for i, t in enumerate(TAGLINES))
     defs = (LG + '<filter id="bl" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="55"/></filter>')
     css = (".ch{animation:rise 1.2s cubic-bezier(.2,.8,.2,1) backwards}.sm{animation:rise 2s .8s cubic-bezier(.2,.8,.2,1) backwards}"
            "@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}"
-           ".tg{opacity:0;animation:cy 16s infinite}@keyframes cy{0%{opacity:0;transform:translateY(10px)}7%,22%{opacity:1;transform:none}29%,100%{opacity:0;transform:translateY(-8px)}}")
+           ".tg{opacity:0;animation:cy 16s cubic-bezier(.4,0,.2,1) infinite}@keyframes cy{0%{opacity:0;transform:translateY(8px)}6%,21%{opacity:1;transform:translateY(0)}27%,100%{opacity:0;transform:translateY(-6px)}}")
     body = (f'<g filter="url(#bl)">{blobs}</g>{dust}'
-            f'<g id="wv">{waves(16, 350, 9, 26)}</g>'
+            f'<g id="wv">{waves(14, 360, 8, 20, op=(.08, .40))}</g>'
             f'<text class="sm" x="600" y="146" text-anchor="middle" style="{MONO}" font-size="13" font-weight="600" letter-spacing="6" fill="#94A3B8">ELECTRICAL &amp; COMPUTER ENGINEERING · B.TECH 2027</text>'
-            f'<g>{letters}</g>'
-            f'<path d="M400 272H800" stroke="url(#lg)" stroke-width="2" stroke-dasharray="400" stroke-dashoffset="400"><animate attributeName="stroke-dashoffset" from="400" to="0" dur="1.8s" begin="1.4s" fill="freeze"/></path>{tl}')
+            f'<g>{letters}</g>{tl}')
     return svg(W, H, body, defs, css, fade_x=.08, fade_y=.12)
 
 
