@@ -2,9 +2,9 @@
 
 <img src="assets/hero.svg" width="100%">
 
-<sub><a href="https://github.com/niranjan-crypt/niranjan-crypt.github.io">portfolio</a> &nbsp;·&nbsp; <a href="https://github.com/niranjan-crypt?tab=repositories">repositories</a> &nbsp;·&nbsp; <a href="https://doi.org/10.1109/EPREC66546.2026.11412040">ieee paper</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-ID">linkedin</a></sub>
+<sub><a href="https://niranjan-crypt.github.io">portfolio</a> &nbsp;·&nbsp; <a href="https://github.com/niranjan-crypt?tab=repositories">repositories</a> &nbsp;·&nbsp; <a href="https://doi.org/10.1109/EPREC66546.2026.11412040">ieee paper</a></sub>
 
-<br><br>
+<img src="assets/face.svg" width="100%">
 
 <p align="center">I study Electrical &amp; Computer Engineering at Amrita Vishwa Vidyapeetham, Coimbatore.<br>
 I work where physics, mathematics and learning systems meet —<br>
@@ -32,14 +32,7 @@ turning the governing equations of a system into models that run on real hardwar
 
 <img src="assets/d-kit.svg" width="100%">
 
-<sub>python · c++ · c · matlab · simulink · sql · bash · dart<br>
-pytorch · tensorflow · opencv · scikit-learn · flower<br>
-postgresql · docker · streamlit · aws · git · linux · flutter<br>
-esp32 · stm32 · raspberry pi · ble · embedded c</sub>
-
-<img src="assets/d-motion.svg" width="100%">
-
-<img src="https://raw.githubusercontent.com/niranjan-crypt/Niranjan-crypt/output/github-contribution-grid-snake-dark.svg" width="100%">
+<img src="assets/toolkit.svg" width="100%">
 
 <img src="assets/footer.svg" width="100%">
 
