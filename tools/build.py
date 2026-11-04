@@ -161,15 +161,12 @@ def hero():
         if c != " ":
             letters += f'<text class="ch" style="animation-delay:{.25 + i*.04:.2f}s;{SANS}" x="{cx:.1f}" y="{y}" text-anchor="middle" font-size="{size}" font-weight="800" fill="#FFFFFF">{c}</text>'
     tl = "".join(f'<text class="tg" style="animation-delay:{i*4}s;{ITALIC}" x="600" y="318" text-anchor="middle" font-size="30" font-weight="400" letter-spacing=".6" fill="{CYAN}">{E(t)}</text>' for i, t in enumerate(TAGLINES))
-    defs = (LG + f'<linearGradient id="bm"><stop offset="0" stop-color="{CYAN}" stop-opacity="0"/><stop offset=".5" stop-color="{SKY}" stop-opacity=".8"/><stop offset="1" stop-color="{BLUE}" stop-opacity="0"/></linearGradient>'
-            '<filter id="bl" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="55"/></filter>'
-            '<filter id="bl2" x="-5%" y="-50%" width="110%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>')
+    defs = (LG + '<filter id="bl" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="55"/></filter>')
     css = (".ch{animation:rise 1.2s cubic-bezier(.2,.8,.2,1) backwards}.sm{animation:rise 2s .8s cubic-bezier(.2,.8,.2,1) backwards}"
            "@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}"
            ".tg{opacity:0;animation:cy 16s infinite}@keyframes cy{0%{opacity:0;transform:translateY(10px)}7%,22%{opacity:1;transform:none}29%,100%{opacity:0;transform:translateY(-8px)}}")
     body = (f'<g filter="url(#bl)">{blobs}</g>{dust}'
-            f'<g id="wv">{waves(16, 350, 9, 26)}</g><use href="#wv" filter="url(#bl2)" opacity=".7"/>'
-            f'<rect y="330" width="260" height="190" fill="url(#bm)" opacity=".14"><animateTransform attributeName="transform" type="translate" values="-300 0;1300 0" dur="11s" repeatCount="indefinite"/></rect>'
+            f'<g id="wv">{waves(16, 350, 9, 26)}</g>'
             f'<text class="sm" x="600" y="146" text-anchor="middle" style="{MONO}" font-size="13" font-weight="600" letter-spacing="6" fill="#94A3B8">ELECTRICAL &amp; COMPUTER ENGINEERING · B.TECH 2027</text>'
             f'<g>{letters}</g>'
             f'<path d="M400 272H800" stroke="url(#lg)" stroke-width="2" stroke-dasharray="400" stroke-dashoffset="400"><animate attributeName="stroke-dashoffset" from="400" to="0" dur="1.8s" begin="1.4s" fill="freeze"/></path>{tl}')
