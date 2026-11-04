@@ -2,11 +2,11 @@
 import os, sys, io, re, math, random, base64
 from functools import lru_cache
 from xml.sax.saxutils import escape as E, unescape as UE
-from fontTools import subset
-from fontTools.ttLib import TTFont
-
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
+sys.path.insert(0, os.path.join(HERE, "lib"))
+from fontTools import subset
+from fontTools.ttLib import TTFont
 random.seed(11)
 ROOT = sys.argv[1] if len(sys.argv) > 1 else "/mnt/user-data/outputs/profile4"
 A = f"{ROOT}/assets"
@@ -16,13 +16,20 @@ SITE = f"https://{U}.github.io"
 
 # ------------------------------------------------------------------ fonts (embedded into every SVG, subset to the glyphs used)
 FONTS = {
-    "NK Grotesk": {300: "space-grotesk-latin-300-normal.woff2", 500: "space-grotesk-latin-500-normal.woff2"},
-    "NK Mono": {400: "jetbrains-mono-latin-400-normal.woff2", 700: "jetbrains-mono-latin-700-normal.woff2"},
-    "NK Serif": {400: "instrument-serif-latin-400-italic.woff2"},
+    "NK Sans": {
+        400: "Inter-Regular.woff2",
+        500: "Inter-Medium.woff2",
+        700: "InterDisplay-Bold.woff2",
+        800: "InterDisplay-ExtraBold.woff2",
+    },
+    "NK Mono": {
+        400: "jetbrains-mono-latin-400-normal.woff2",
+        700: "jetbrains-mono-latin-700-normal.woff2",
+    },
 }
 MONO = "font-family:'NK Mono','JetBrains Mono','SF Mono',Menlo,Consolas,monospace"
-SANS = "font-family:'NK Grotesk','Space Grotesk','Helvetica Neue',Helvetica,Arial,sans-serif"
-SERIF = "font-family:'NK Serif','Instrument Serif',Georgia,'Times New Roman',serif;font-style:italic"
+SANS = "font-family:'NK Sans','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif"
+TAGLINE = "font-family:'NK Sans','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
 
 
 @lru_cache(None)
@@ -141,31 +148,27 @@ def hero():
         dust += (f'<circle cx="{x}" cy="{y}" r="{r}" fill="{random.choice(DUSTC)}" opacity=".1"><animate attributeName="opacity" values=".08;.7;.08" dur="{d:.1f}s" begin="-{b:.1f}s" repeatCount="indefinite"/>'
                  f'<animateTransform attributeName="transform" type="translate" values="0 0;{random.randint(-18,18)} {random.randint(-24,-6)};0 0" dur="{d*2:.1f}s" repeatCount="indefinite"/></circle>')
     # name: every letter placed from real font metrics, then rises in with a stagger
-    size, track, y = 54, 8, 238
-    adv = advances(FONTS["NK Grotesk"][500], NAME, size)
+    size, track, y = 66, 5.5, 238
+    adv = advances(FONTS["NK Sans"][800], NAME, size)
     x = 600 - (sum(adv) + track * (len(NAME) - 1)) / 2
     letters = ""
     for i, (c, a) in enumerate(zip(NAME, adv)):
         cx = x + a / 2; x += a + track
         if c != " ":
-            for fill in ("url(#cr)", "url(#sh)"):
-                letters += f'<text class="ch" style="animation-delay:{.3 + i*.05:.2f}s;{SANS}" x="{cx:.1f}" y="{y}" text-anchor="middle" font-size="{size}" font-weight="500" fill="{fill}">{c}</text>'
-    tl = "".join(f'<text class="tg" style="animation-delay:{i*4}s;{SERIF}" x="600" y="312" text-anchor="middle" font-size="32" fill="{BLUE}">{E(t)}</text>' for i, t in enumerate(TAGLINES))
+            letters += f'<text class="ch" style="animation-delay:{.25 + i*.04:.2f}s;{SANS}" x="{cx:.1f}" y="{y}" text-anchor="middle" font-size="{size}" font-weight="800" fill="#FFFFFF">{c}</text>'
+    tl = "".join(f'<text class="tg" style="animation-delay:{i*4}s;{TAGLINE}" x="600" y="316" text-anchor="middle" font-size="28" font-weight="400" letter-spacing="1.2" fill="{BLUE}">{E(t)}</text>' for i, t in enumerate(TAGLINES))
     defs = (LG + f'<linearGradient id="bm"><stop offset="0" stop-color="{LIME}" stop-opacity="0"/><stop offset=".5" stop-color="{LIME}"/><stop offset="1" stop-color="{LIME}" stop-opacity="0"/></linearGradient>'
             '<filter id="bl" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="55"/></filter>'
-            '<filter id="bl2" x="-5%" y="-50%" width="110%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>'
-            '<filter id="gw" x="-10%" y="-60%" width="120%" height="220%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>'
-            '<linearGradient id="cr" gradientUnits="userSpaceOnUse" x1="0" y1="196" x2="0" y2="240"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".42" stop-color="#CDCBCA"/><stop offset=".5" stop-color="#6F6E6D"/><stop offset=".64" stop-color="#A9C4C3"/><stop offset="1" stop-color="#E9E8E7"/></linearGradient>'
-            '<linearGradient id="sh" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".38" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset=".62" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0"/><animateTransform attributeName="gradientTransform" type="translate" values="-1200 0;1200 0" dur="7s" repeatCount="indefinite"/></linearGradient>')
-    css = (".ch{animation:rise 1.3s cubic-bezier(.2,.8,.2,1) backwards}.sm{animation:rise 2s .9s cubic-bezier(.2,.8,.2,1) backwards}"
-           "@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}"
-           ".tg{opacity:0;animation:cy 16s infinite}@keyframes cy{0%{opacity:0;transform:translateY(12px)}7%,22%{opacity:1;transform:none}29%,100%{opacity:0;transform:translateY(-10px)}}")
+            '<filter id="bl2" x="-5%" y="-50%" width="110%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>')
+    css = (".ch{animation:rise 1.2s cubic-bezier(.2,.8,.2,1) backwards}.sm{animation:rise 2s .8s cubic-bezier(.2,.8,.2,1) backwards}"
+           "@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}"
+           ".tg{opacity:0;animation:cy 16s infinite}@keyframes cy{0%{opacity:0;transform:translateY(10px)}7%,22%{opacity:1;transform:none}29%,100%{opacity:0;transform:translateY(-8px)}}")
     body = (f'<rect width="{W}" height="{H}" fill="#080808"/><g filter="url(#bl)">{blobs}</g>{dust}'
             f'<g id="wv">{waves(16, 350, 9, 26)}</g><use href="#wv" filter="url(#bl2)" opacity=".7"/>'
             f'<rect y="330" width="260" height="190" fill="url(#bm)" opacity=".13"><animateTransform attributeName="transform" type="translate" values="-300 0;1300 0" dur="11s" repeatCount="indefinite"/></rect>'
-            f'<text class="sm" x="600" y="150" text-anchor="middle" style="{MONO}" font-size="12" letter-spacing="7" fill="#7C7C86">ELECTRICAL &amp; COMPUTER ENGINEERING · B.TECH 2027</text>'
-            f'<g filter="url(#gw)">{letters}</g>'
-            f'<path d="M450 268H750" stroke="url(#lg)" stroke-width="1.5" stroke-dasharray="300" stroke-dashoffset="300"><animate attributeName="stroke-dashoffset" from="300" to="0" dur="1.8s" begin="1.6s" fill="freeze"/></path>{tl}')
+            f'<text class="sm" x="600" y="148" text-anchor="middle" style="{MONO}" font-size="12" letter-spacing="6" fill="#888894">ELECTRICAL &amp; COMPUTER ENGINEERING · B.TECH 2027</text>'
+            f'<g>{letters}</g>'
+            f'<path d="M420 270H780" stroke="url(#lg)" stroke-width="1.5" stroke-dasharray="360" stroke-dashoffset="360"><animate attributeName="stroke-dashoffset" from="360" to="0" dur="1.8s" begin="1.4s" fill="freeze"/></path>{tl}')
     return svg(W, H, body, defs, css, fade_x=.08, fade_y=.12)
 
 
@@ -277,7 +280,7 @@ def row(idx, title, desc, tag, last=False, delay=0):
     line = lambda y: f'<path d="M0 {y}H1200" stroke="#26282A"/><path d="M0 {y}H1200" stroke="url(#sw)" stroke-width="1.5"/>'
     body = (f'{line(1)}{line(H-1) if last else ""}'
             f'<text x="28" y="66" style="{MONO}" font-size="13" fill="#55555F">{E(idx)}</text>'
-            f'<text x="92" y="62" style="{SANS}" font-size="34" font-weight="300" letter-spacing=".5" fill="#F4F4F5">{E(title)}</text>'
+            f'<text x="92" y="62" style="{SANS}" font-size="32" font-weight="500" letter-spacing=".3" fill="#F4F4F5">{E(title)}</text>'
             f'<text x="92" y="93" style="{MONO}" font-size="13" fill="#8A8A93">{E(desc)}</text>'
             f'<text x="1120" y="58" text-anchor="end" style="{MONO}" font-size="12" letter-spacing="3" fill="{LIME}" opacity=".92">{E(tag)}</text>'
             f'<text x="1172" y="72" text-anchor="end" style="{MONO}" font-size="24" fill="{BLUE}">→<animateTransform attributeName="transform" type="translate" values="0 0;7 0;0 0" dur="3.2s" repeatCount="indefinite" {EASE}/></text>')
@@ -303,7 +306,7 @@ def domains():
 def footer():
     W, H = 1200, 300
     body = (f'{waves(14, 150, 9, 24, op=(.08, .5))}'
-            f'<text x="600" y="106" text-anchor="middle" style="{SERIF}" font-size="38" fill="#EDEDF0">understand the system. engineer the intelligence.</text>'
+            f'<text x="600" y="106" text-anchor="middle" style="{TAGLINE}" font-size="30" font-weight="400" letter-spacing=".5" fill="#EDEDF0">understand the system. engineer the intelligence.</text>'
             f'<text x="600" y="140" text-anchor="middle" style="{MONO}" font-size="11" letter-spacing="6" fill="#55555F">NIRANJAN KRISHNAKUMAR · COIMBATORE</text>')
     return svg(W, H, body, LG, fade_x=.08, fade_y=.2)
 
