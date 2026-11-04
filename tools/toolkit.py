@@ -1,11 +1,23 @@
-"""Circuit-board toolkit panel: signal pulses travel each trace and light every tool as they pass."""
+"""Circuit-board toolkit panel (obsidian / chrome / powder blue) with official brand colours."""
 import json, os
 from xml.sax.saxutils import escape as E
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SI = json.load(open(os.path.join(HERE, "icons.json")))
-BLUE, LIME, LIME2, EDGE, CARD = "#00E5FF", "#C6FF00", "#E4FF4D", "#12385A", "#05080D"
+BRAND = json.load(open(os.path.join(HERE, "brand.json")))
+POWDER, CHROME, BRIGHT = "#A8C9C8", "#CDCBCA", "#F4F3F2"
+EDGE, CARD, TRACE = "#2A2D2F", "#0C0D0E", "#26292B"
 MONO = "font-family:'NK Mono','JetBrains Mono','SF Mono',Menlo,Consolas,monospace"
+
+# official brand colours; a few are swapped for the brand's lighter palette colour so they stay visible on black
+LIGHTER = {"github": "#F0EFEE", "pandas": "#E70488", "numpy": "#4DABCF", "stmicroelectronics": "#3CB4E6", "cplusplus": "#659AD2",
+           "flutter": "#54C5F8", "raspberrypi": "#C51A4A", "opencv": "#8B73FF", "dart": "#2BB7F6", "arduino": "#00A3AD", "postgresql": "#5B84F0"}
+GLYPH_COLOR = {"matlab": "#E16737", "cloud": "#FF9900", "code": "#3B9CFF"}  # brand colour where the tool has one but no icon in the open set
+
+
+def brand(key):
+    return LIGHTER.get(key) or "#" + BRAND[key]
+
 
 # 24x24 line glyphs for tools / techniques that have no brand logo
 GL = {
@@ -62,36 +74,41 @@ ROWS = [
 
 
 def toolkit_svg():
-    W, PITCH, X0, SPINE, XEND, CYCLE, TRAVEL = 1200, 100, 290, 222, 1180, 8.0, 7.0
-    cy0 = 62
-    H = cy0 + (len(ROWS) - 1) * PITCH + 90
+    W, PITCH, XP, X0, SPINE, XEND, CYCLE, TRAVEL = 1200, 112, 116, 292, 222, 1180, 8.0, 7.0
+    cy0, T, IC = 64, 34, 1.5          # first row y, tile half-size, icon scale (24px glyph -> 36px)
+    H = cy0 + (len(ROWS) - 1) * PITCH + 96
     cyN = cy0 + (len(ROWS) - 1) * PITCH
+    defs = (f'<pattern id="dp" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="{CHROME}" opacity=".08"/></pattern>'
+            '<linearGradient id="py" x1="0" y1="0" x2="1" y2="1"><stop offset=".5" stop-color="#4B8BBE"/><stop offset=".5" stop-color="#FFD43B"/></linearGradient>'
+            f'<linearGradient id="chr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{BRIGHT}"/><stop offset=".5" stop-color="{CHROME}"/><stop offset="1" stop-color="#8E8D8C"/></linearGradient>')
     body = (f'<rect width="{W}" height="{H}" fill="url(#dp)"/>'
-            f'<path d="M{SPINE} {cy0}V{cyN}" stroke="{EDGE}" stroke-width="1.5"/>'
+            f'<path d="M{SPINE} {cy0}V{cyN}" stroke="{TRACE}" stroke-width="1.6"/>'
             f'<g><animateMotion dur="{CYCLE}s" repeatCount="indefinite" path="M{SPINE} {cy0}V{cyN}" keyPoints="0;1;1" keyTimes="0;.7;1" calcMode="linear"/>'
-            f'<circle r="9" fill="{LIME}" opacity=".18"/><circle r="3" fill="{LIME}"/></g>')
+            f'<circle r="9" fill="{POWDER}" opacity=".22"/><circle r="3" fill="{BRIGHT}"/></g>')
     for r, (name, items) in enumerate(ROWS):
         cy, delay = cy0 + r * PITCH, round(r * .7, 2)
-        body += (f'<path d="M{SPINE} {cy}H{XEND}" stroke="{EDGE}" stroke-width="1.5"/>'
-                 f'<circle cx="{SPINE}" cy="{cy}" r="4" fill="{CARD}" stroke="{BLUE}" stroke-width="1.5"/>'
-                 f'<circle cx="{XEND}" cy="{cy}" r="3.5" fill="{CARD}" stroke="{EDGE}" stroke-width="1.5"/>'
-                 f'<text x="22" y="{cy-3}" style="{MONO}" font-size="12.5" font-weight="700" letter-spacing="2.5" fill="{LIME}">{E(name)}</text>'
-                 f'<text x="22" y="{cy+17}" style="{MONO}" font-size="11" letter-spacing="2" fill="#52525B">{len(items):02d} TOOLS</text>'
+        body += (f'<path d="M{SPINE} {cy}H{XEND}" stroke="{TRACE}" stroke-width="1.6"/>'
+                 f'<circle cx="{SPINE}" cy="{cy}" r="4.2" fill="{CARD}" stroke="{POWDER}" stroke-width="1.6"/>'
+                 f'<circle cx="{XEND}" cy="{cy}" r="3.6" fill="{CARD}" stroke="{EDGE}" stroke-width="1.6"/>'
+                 f'<text x="22" y="{cy-3}" style="{MONO}" font-size="12.5" font-weight="700" letter-spacing="2.5" fill="url(#chr)">{E(name)}</text>'
+                 f'<text x="22" y="{cy+17}" style="{MONO}" font-size="11" letter-spacing="2" fill="#5F5E5D">{len(items):02d} TOOLS</text>'
                  f'<g opacity="0"><animateMotion dur="{CYCLE}s" begin="{delay}s" repeatCount="indefinite" path="M{SPINE} {cy}H{XEND}" keyPoints="0;1;1" keyTimes="0;.875;1" calcMode="linear"/>'
                  f'<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.86;.875;1" dur="{CYCLE}s" begin="{delay}s" repeatCount="indefinite"/>'
-                 f'<circle r="11" fill="{BLUE}" opacity=".18"/><circle r="3.4" fill="{LIME}"/></g>')
+                 f'<circle r="12" fill="{POWDER}" opacity=".2"/><circle r="3.6" fill="{BRIGHT}"/></g>')
         for j, (label, kind, key) in enumerate(items):
-            cx = X0 + j * 112
+            cx = X0 + j * XP
             f = TRAVEL * (cx - SPINE) / (XEND - SPINE) / CYCLE
             kt = f'0;{f-.045:.3f};{f:.3f};{f+.11:.3f};1'
-            anim = lambda attr, a, b: (f'<animate attributeName="{attr}" values="{a};{a};{b};{a};{a}" keyTimes="{kt}" dur="{CYCLE}s" begin="{delay}s" repeatCount="indefinite"/>')
+            anim = lambda attr, a, b: f'<animate attributeName="{attr}" values="{a};{a};{b};{a};{a}" keyTimes="{kt}" dur="{CYCLE}s" begin="{delay}s" repeatCount="indefinite"/>'
+            pop = f'<animateTransform attributeName="transform" type="scale" values="1 1;1 1;1.14 1.14;1 1;1 1" keyTimes="{kt}" dur="{CYCLE}s" begin="{delay}s" repeatCount="indefinite"/>'
             if kind == "si":
-                icon = f'<g transform="translate({cx-15},{cy-15}) scale(1.25)" fill="{BLUE}"><path d="{SI[key]}"/>{anim("fill", BLUE, LIME2)}</g>'
+                col = "url(#py)" if key == "python" else brand(key)
+                icon = f'<g transform="translate({-12*IC},{-12*IC}) scale({IC})" fill="{col}"><path d="{SI[key]}"/></g>'
             else:
-                icon = (f'<g transform="translate({cx-15},{cy-15}) scale(1.25)" fill="none" stroke="{BLUE}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">{GL[key]}'
-                        f'{anim("stroke", BLUE, LIME2)}</g>')
-            body += (f'<rect x="{cx-30}" y="{cy-30}" width="60" height="60" rx="15" fill="{CARD}" stroke="{EDGE}" stroke-width="1.3">{anim("stroke", EDGE, LIME)}</rect>'
-                     f'<rect x="{cx-30}" y="{cy-30}" width="60" height="60" rx="15" fill="{LIME}" opacity="0"><animate attributeName="opacity" values="0;0;.16;0;0" keyTimes="{kt}" dur="{CYCLE}s" begin="{delay}s" repeatCount="indefinite"/></rect>'
-                     f'{icon}<text x="{cx}" y="{cy+47}" text-anchor="middle" style="{MONO}" font-size="11.5" fill="#9CA3AF">{E(label)}</text>')
-    defs = (f'<pattern id="dp" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="{BLUE}" opacity=".12"/></pattern>')
+                col = GLYPH_COLOR.get(key, POWDER)
+                icon = f'<g transform="translate({-12*IC},{-12*IC}) scale({IC})" fill="none" stroke="{col}" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round">{GL[key]}</g>'
+            body += (f'<rect x="{cx-T}" y="{cy-T}" width="{2*T}" height="{2*T}" rx="17" fill="{CARD}" stroke="{EDGE}" stroke-width="1.3">{anim("stroke", EDGE, POWDER)}</rect>'
+                     f'<rect x="{cx-T}" y="{cy-T}" width="{2*T}" height="{2*T}" rx="17" fill="{POWDER}" opacity="0"><animate attributeName="opacity" values="0;0;.14;0;0" keyTimes="{kt}" dur="{CYCLE}s" begin="{delay}s" repeatCount="indefinite"/></rect>'
+                     f'<g transform="translate({cx},{cy})"><g>{pop}{icon}</g></g>'
+                     f'<text x="{cx}" y="{cy+T+19}" text-anchor="middle" style="{MONO}" font-size="12.5" fill="#A3A2A1">{E(label)}</text>')
     return W, H, body, defs

@@ -57,7 +57,7 @@ def advances(fn, text, size):
 
 
 # ------------------------------------------------------------------ palette + shared svg helpers
-BLUE, ELEC, LIME, LIME2 = "#00E5FF", "#2F7BFF", "#C6FF00", "#E4FF4D"
+BLUE, ELEC, LIME, LIME2 = "#A8C9C8", "#8FB5B4", "#CDCBCA", "#F4F3F2"   # powder, deep powder, chrome silver, bright chrome
 DUSTC = ["#fff", "#fff", BLUE, LIME]
 
 
@@ -130,8 +130,8 @@ DOMAINS = [
 def hero():
     W, H = 1200, 520
     blobs = ""
-    for cx, cy, rx, ry, col, op, tx, ty, dur in [(280, 120, 330, 85, "#0AA8FF", .22, 160, 30, 19), (760, 150, 360, 95, "#2F5BFF", .28, -170, 20, 23),
-                                                 (1000, 100, 260, 70, BLUE, .16, -120, 40, 17), (560, 190, 300, 60, LIME, .09, 100, -20, 21)]:
+    for cx, cy, rx, ry, col, op, tx, ty, dur in [(280, 120, 330, 85, "#6E9593", .34, 160, 30, 19), (760, 150, 360, 95, "#3A4B4A", .55, -170, 20, 23),
+                                                 (1000, 100, 260, 70, BLUE, .22, -120, 40, 17), (560, 190, 300, 60, LIME, .09, 100, -20, 21)]:
         blobs += (f'<ellipse cx="{cx}" cy="{cy}" rx="{rx}" ry="{ry}" fill="{col}" opacity="{op}"><animateTransform attributeName="transform" type="translate" '
                   f'values="0 0;{tx} {ty};0 0" dur="{dur}s" repeatCount="indefinite" {EASE}/></ellipse>')
     dust = ""
@@ -141,25 +141,26 @@ def hero():
         dust += (f'<circle cx="{x}" cy="{y}" r="{r}" fill="{random.choice(DUSTC)}" opacity=".1"><animate attributeName="opacity" values=".08;.7;.08" dur="{d:.1f}s" begin="-{b:.1f}s" repeatCount="indefinite"/>'
                  f'<animateTransform attributeName="transform" type="translate" values="0 0;{random.randint(-18,18)} {random.randint(-24,-6)};0 0" dur="{d*2:.1f}s" repeatCount="indefinite"/></circle>')
     # name: every letter placed from real font metrics, then rises in with a stagger
-    size, track, y = 58, 10, 238
-    adv = advances(FONTS["NK Grotesk"][300], NAME, size)
+    size, track, y = 54, 8, 238
+    adv = advances(FONTS["NK Grotesk"][500], NAME, size)
     x = 600 - (sum(adv) + track * (len(NAME) - 1)) / 2
     letters = ""
     for i, (c, a) in enumerate(zip(NAME, adv)):
         cx = x + a / 2; x += a + track
         if c != " ":
-            letters += f'<text class="ch" style="animation-delay:{.3 + i*.05:.2f}s;{SANS}" x="{cx:.1f}" y="{y}" text-anchor="middle" font-size="{size}" font-weight="300" fill="url(#sh)">{c}</text>'
-    tl = "".join(f'<text class="tg" style="animation-delay:{i*4}s;{SERIF}" x="600" y="312" text-anchor="middle" font-size="32" fill="{LIME2}">{E(t)}</text>' for i, t in enumerate(TAGLINES))
+            for fill in ("url(#cr)", "url(#sh)"):
+                letters += f'<text class="ch" style="animation-delay:{.3 + i*.05:.2f}s;{SANS}" x="{cx:.1f}" y="{y}" text-anchor="middle" font-size="{size}" font-weight="500" fill="{fill}">{c}</text>'
+    tl = "".join(f'<text class="tg" style="animation-delay:{i*4}s;{SERIF}" x="600" y="312" text-anchor="middle" font-size="32" fill="{BLUE}">{E(t)}</text>' for i, t in enumerate(TAGLINES))
     defs = (LG + f'<linearGradient id="bm"><stop offset="0" stop-color="{LIME}" stop-opacity="0"/><stop offset=".5" stop-color="{LIME}"/><stop offset="1" stop-color="{LIME}" stop-opacity="0"/></linearGradient>'
             '<filter id="bl" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="55"/></filter>'
             '<filter id="bl2" x="-5%" y="-50%" width="110%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>'
             '<filter id="gw" x="-10%" y="-60%" width="120%" height="220%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>'
-            '<linearGradient id="sh" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0"><stop offset="0" stop-color="#D4D8DE"/><stop offset=".36" stop-color="#D4D8DE"/><stop offset=".5" stop-color="#F7FFC2"/><stop offset=".64" stop-color="#D4D8DE"/><stop offset="1" stop-color="#D4D8DE"/>'
-            '<animateTransform attributeName="gradientTransform" type="translate" values="-1200 0;1200 0" dur="9s" repeatCount="indefinite"/></linearGradient>')
+            '<linearGradient id="cr" gradientUnits="userSpaceOnUse" x1="0" y1="196" x2="0" y2="240"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".42" stop-color="#CDCBCA"/><stop offset=".5" stop-color="#6F6E6D"/><stop offset=".64" stop-color="#A9C4C3"/><stop offset="1" stop-color="#E9E8E7"/></linearGradient>'
+            '<linearGradient id="sh" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".38" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".95"/><stop offset=".62" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="0"/><animateTransform attributeName="gradientTransform" type="translate" values="-1200 0;1200 0" dur="7s" repeatCount="indefinite"/></linearGradient>')
     css = (".ch{animation:rise 1.3s cubic-bezier(.2,.8,.2,1) backwards}.sm{animation:rise 2s .9s cubic-bezier(.2,.8,.2,1) backwards}"
            "@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}"
            ".tg{opacity:0;animation:cy 16s infinite}@keyframes cy{0%{opacity:0;transform:translateY(12px)}7%,22%{opacity:1;transform:none}29%,100%{opacity:0;transform:translateY(-10px)}}")
-    body = (f'<rect width="{W}" height="{H}" fill="#000"/><g filter="url(#bl)">{blobs}</g>{dust}'
+    body = (f'<rect width="{W}" height="{H}" fill="#080808"/><g filter="url(#bl)">{blobs}</g>{dust}'
             f'<g id="wv">{waves(16, 350, 9, 26)}</g><use href="#wv" filter="url(#bl2)" opacity=".7"/>'
             f'<rect y="330" width="260" height="190" fill="url(#bm)" opacity=".13"><animateTransform attributeName="transform" type="translate" values="-300 0;1300 0" dur="11s" repeatCount="indefinite"/></rect>'
             f'<text class="sm" x="600" y="150" text-anchor="middle" style="{MONO}" font-size="12" letter-spacing="7" fill="#7C7C86">ELECTRICAL &amp; COMPUTER ENGINEERING · B.TECH 2027</text>'
@@ -175,7 +176,7 @@ def pill(label, accent=False, delay=0):
     path = f"M{r} 1H{w-r}A{r-1} {r-1} 0 0 1 {w-r} {h-1}H{r}A{r-1} {r-1} 0 0 1 {r} 1Z"
     defs = (f'<linearGradient id="pg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{w}" y2="0"><stop offset="0" stop-color="{BLUE}"/><stop offset="1" stop-color="{LIME}"/></linearGradient>'
             '<filter id="pf" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>')
-    body = (f'<path d="{path}" fill="#05080D" fill-opacity=".75" stroke="{col}" stroke-opacity=".38"/>'
+    body = (f'<path d="{path}" fill="#0C0D0E" fill-opacity=".75" stroke="{col}" stroke-opacity=".38"/>'
             f'<g><animateMotion dur="6s" begin="{delay}s" repeatCount="indefinite" path="{path}"/><circle r="6" fill="{col}" opacity=".6" filter="url(#pf)"/><circle r="2.4" fill="#fff"/></g>'
             f'<text x="{w/2 - 8}" y="28.5" text-anchor="middle" style="{MONO}" font-size="12" letter-spacing="3" fill="#F4F4F5">{E(label)}</text>'
             f'<text x="{w - 28}" y="29" text-anchor="middle" style="{MONO}" font-size="13" fill="{col}">↗</text>')
@@ -204,8 +205,8 @@ def pipeline():
     css = ".fl{animation:fl 1.4s linear infinite}@keyframes fl{to{stroke-dashoffset:-28}}"
     b = f'<text x="600" y="36" text-anchor="middle" style="{MONO}" font-size="11" letter-spacing="8" fill="#6B6B75">FROM EQUATIONS TO SILICON</text>'
     # stage 1 · physics
-    b += ''.join(f'<path d="M{X0} {Y0 - g*41}H{X0+PW}" stroke="#102A40" stroke-dasharray="2 6"/>' for g in (1, 2, 3))
-    b += f'<path d="M{X0} {Y0}H{X0+PW+14}M{X0} {Y0}V{Y0-PH-18}" stroke="#1D4466" stroke-width="1.4"/>'
+    b += ''.join(f'<path d="M{X0} {Y0 - g*41}H{X0+PW}" stroke="#1D2022" stroke-dasharray="2 6"/>' for g in (1, 2, 3))
+    b += f'<path d="M{X0} {Y0}H{X0+PW+14}M{X0} {Y0}V{Y0-PH-18}" stroke="#3A3E40" stroke-width="1.4"/>'
     b += f'<text x="{X0+PW+16}" y="{Y0+16}" style="{MONO}" font-size="11" fill="#6B6B75">V</text><text x="{X0-18}" y="{Y0-PH-14}" style="{MONO}" font-size="11" fill="#6B6B75">P</text>'
     b += (f'<path d="{fs[0]}" fill="{BLUE}" opacity=".07"><animate attributeName="d" values="{dv(fs)}" dur="9s" repeatCount="indefinite" {SPLINE}/></path>'
           f'<path d="{ds[0]}" fill="none" stroke="url(#cv)" stroke-width="2.2" stroke-linecap="round"><animate attributeName="d" values="{dv(ds)}" dur="9s" repeatCount="indefinite" {SPLINE}/></path>')
@@ -229,20 +230,20 @@ def pipeline():
                   f'<animate attributeName="opacity" values="0;1;1;0" dur="2.4s" begin="0s" repeatCount="indefinite"/></circle>')
     for l, layer in enumerate(pos):
         for (x, y) in layer:
-            b += (f'<circle cx="{x}" cy="{y:.0f}" r="7.5" fill="#05080D" stroke="{BLUE}" stroke-width="1.4"/>'
+            b += (f'<circle cx="{x}" cy="{y:.0f}" r="7.5" fill="#0C0D0E" stroke="{BLUE}" stroke-width="1.4"/>'
                   f'<circle cx="{x}" cy="{y:.0f}" r="3" fill="{BLUE}"><animate attributeName="fill" values="{BLUE};{LIME};{BLUE}" dur="3.2s" begin="{l*.5}s" repeatCount="indefinite"/>'
                   f'<animate attributeName="r" values="2.6;4.8;2.6" dur="3.2s" begin="{l*.5}s" repeatCount="indefinite"/></circle>')
     # stage 3 · hardware
     cx, cy2 = 1000, 160
     for k in range(3):
         y = 140 + k * 20
-        b += f'<path d="M905 {y}H958" stroke="#12385A" stroke-width="1.5"/><circle r="2.2" fill="{LIME}"><animateMotion dur="1.8s" begin="-{k*.5}s" repeatCount="indefinite" path="M905 {y}H958"/></circle>'
+        b += f'<path d="M905 {y}H958" stroke="#2B2F31" stroke-width="1.5"/><circle r="2.2" fill="{LIME}"><animateMotion dur="1.8s" begin="-{k*.5}s" repeatCount="indefinite" path="M905 {y}H958"/></circle>'
     b += (f'<circle cx="{cx}" cy="{cy2}" r="88" fill="none" stroke="{LIME}" stroke-opacity=".55" stroke-dasharray="3 10"><animateTransform attributeName="transform" type="rotate" from="0 {cx} {cy2}" to="360 {cx} {cy2}" dur="26s" repeatCount="indefinite"/></circle>'
           f'<circle cx="{cx}" cy="{cy2}" r="74" fill="none" stroke="{BLUE}" stroke-opacity=".45" stroke-dasharray="1 7"><animateTransform attributeName="transform" type="rotate" from="360 {cx} {cy2}" to="0 {cx} {cy2}" dur="38s" repeatCount="indefinite"/></circle>')
     for i in range(5):
         o = 972 + i * 14
         b += f'<path d="M{o} 120v-11M{o} 200v11M960 {o-852}h-11M1040 {o-852}h11" stroke="{BLUE}" stroke-width="2" stroke-linecap="round"/>'
-    b += (f'<rect x="960" y="120" width="80" height="80" rx="11" fill="#05080D" stroke="{BLUE}" stroke-width="1.6"/>'
+    b += (f'<rect x="960" y="120" width="80" height="80" rx="11" fill="#0C0D0E" stroke="{BLUE}" stroke-width="1.6"/>'
           f'<rect x="976" y="136" width="48" height="48" rx="7" fill="{BLUE}" opacity=".14" stroke="{LIME}" stroke-width="1.2"><animate attributeName="opacity" values=".12;.45;.12" dur="2.2s" repeatCount="indefinite"/></rect>'
           f'<text x="1000" y="165" text-anchor="middle" style="{MONO}" font-size="13" font-weight="700" fill="{LIME}">MCU</text>'
           f'<circle cx="1033" cy="193" r="2" fill="{LIME}"><animate attributeName="opacity" values="1;.1;1" dur="1.2s" repeatCount="indefinite"/></circle>')
@@ -273,7 +274,7 @@ def row(idx, title, desc, tag, last=False, delay=0):
     W, H = 1200, 122
     defs = (f'<linearGradient id="sw" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="320" y2="0"><stop offset="0" stop-color="{BLUE}" stop-opacity="0"/><stop offset=".5" stop-color="{BLUE}"/><stop offset="1" stop-color="{LIME}" stop-opacity="0"/>'
             f'<animateTransform attributeName="gradientTransform" type="translate" values="-320 0;1200 0" dur="7s" begin="{delay}s" repeatCount="indefinite"/></linearGradient>')
-    line = lambda y: f'<path d="M0 {y}H1200" stroke="#232329"/><path d="M0 {y}H1200" stroke="url(#sw)" stroke-width="1.5"/>'
+    line = lambda y: f'<path d="M0 {y}H1200" stroke="#26282A"/><path d="M0 {y}H1200" stroke="url(#sw)" stroke-width="1.5"/>'
     body = (f'{line(1)}{line(H-1) if last else ""}'
             f'<text x="28" y="66" style="{MONO}" font-size="13" fill="#55555F">{E(idx)}</text>'
             f'<text x="92" y="62" style="{SANS}" font-size="34" font-weight="300" letter-spacing=".5" fill="#F4F4F5">{E(title)}</text>'
