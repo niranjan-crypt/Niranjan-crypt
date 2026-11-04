@@ -8,7 +8,7 @@ BRAND = json.load(open(os.path.join(HERE, "brand.json")))
 CYAN = "#00F0FF"
 SKY = "#38BDF8"
 BLUE = "#3B82F6"
-EDGE, CARD, TRACE = "#172033", "#000000", "#1E293B"
+EDGE, CARD, TRACE = "#1E293B", "#0D1117", "#1E293B"
 MONO = "font-family:'NK Mono','JetBrains Mono','SF Mono',Menlo,Consolas,monospace"
 
 # official brand colours; a few are swapped for the brand's lighter palette colour so they stay visible on black
@@ -80,9 +80,9 @@ def toolkit_svg():
     cy0, T, IC = 64, 34, 1.5          # first row y, tile half-size, icon scale (24px glyph -> 36px)
     H = cy0 + (len(ROWS) - 1) * PITCH + 96
     cyN = cy0 + (len(ROWS) - 1) * PITCH
-    defs = (f'<pattern id="dp" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="{CYAN}" opacity=".08"/></pattern>'
+    defs = (f'<pattern id="dp" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="{CYAN}" opacity=".06"/></pattern>'
             '<linearGradient id="py" x1="0" y1="0" x2="1" y2="1"><stop offset=".5" stop-color="#4B8BBE"/><stop offset=".5" stop-color="#FFD43B"/></linearGradient>')
-    body = (f'<rect width="{W}" height="{H}" fill="#000000"/><rect width="{W}" height="{H}" fill="url(#dp)"/>'
+    body = (f'<rect width="{W}" height="{H}" fill="url(#dp)"/>'
             f'<path d="M{SPINE} {cy0}V{cyN}" stroke="{TRACE}" stroke-width="1.8"/>'
             f'<g><animateMotion dur="{CYCLE}s" repeatCount="indefinite" path="M{SPINE} {cy0}V{cyN}" keyPoints="0;1;1" keyTimes="0;.7;1" calcMode="linear"/>'
             f'<circle r="10" fill="{CYAN}" opacity=".25"/><circle r="3.5" fill="{SKY}"/></g>')

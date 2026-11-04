@@ -72,7 +72,7 @@ ICE = "#E0F2FE"
 DUSTC = ["#FFFFFF", CYAN, SKY, BLUE, ICE]
 
 
-def svg(w, h, body, defs="", css="", fade_x=.06, fade_y=0.0, mask=True, bg="#000000"):
+def svg(w, h, body, defs="", css="", fade_x=.06, fade_y=0.0, mask=True):
     fx = fy = ""; o = c = ""
     if mask:
         fx = (f'<linearGradient id="fx"><stop offset="0" stop-color="#000"/><stop offset="{fade_x}" stop-color="#fff"/><stop offset="{1-fade_x}" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>'
@@ -82,9 +82,8 @@ def svg(w, h, body, defs="", css="", fade_x=.06, fade_y=0.0, mask=True, bg="#000
             fy = (f'<linearGradient id="fy" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000"/><stop offset="{fade_y}" stop-color="#fff"/><stop offset="{1-fade_y}" stop-color="#fff"/><stop offset="1" stop-color="#000"/></linearGradient>'
                   f'<mask id="my" maskUnits="userSpaceOnUse" x="0" y="0" width="{w}" height="{h}"><rect width="{w}" height="{h}" fill="url(#fy)"/></mask>')
             o += '<g mask="url(#my)">'; c += "</g>"
-    bg_rect = f'<rect width="{w}" height="{h}" fill="{bg}"/>' if bg else ""
     out = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">'
-           f'<defs>{fx}{fy}{defs}</defs><style>text{{text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased;}}{css}</style>{bg_rect}{o}{body}{c}</svg>')
+           f'<defs>{fx}{fy}{defs}</defs><style>text{{text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased;}}{css}</style>{o}{body}{c}</svg>')
     return embed(out)
 
 
@@ -168,7 +167,7 @@ def hero():
     css = (".ch{animation:rise 1.2s cubic-bezier(.2,.8,.2,1) backwards}.sm{animation:rise 2s .8s cubic-bezier(.2,.8,.2,1) backwards}"
            "@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}"
            ".tg{opacity:0;animation:cy 16s infinite}@keyframes cy{0%{opacity:0;transform:translateY(10px)}7%,22%{opacity:1;transform:none}29%,100%{opacity:0;transform:translateY(-8px)}}")
-    body = (f'<rect width="{W}" height="{H}" fill="#000000"/><g filter="url(#bl)">{blobs}</g>{dust}'
+    body = (f'<g filter="url(#bl)">{blobs}</g>{dust}'
             f'<g id="wv">{waves(16, 350, 9, 26)}</g><use href="#wv" filter="url(#bl2)" opacity=".7"/>'
             f'<rect y="330" width="260" height="190" fill="url(#bm)" opacity=".14"><animateTransform attributeName="transform" type="translate" values="-300 0;1300 0" dur="11s" repeatCount="indefinite"/></rect>'
             f'<text class="sm" x="600" y="146" text-anchor="middle" style="{MONO}" font-size="13" font-weight="600" letter-spacing="6" fill="#94A3B8">ELECTRICAL &amp; COMPUTER ENGINEERING · B.TECH 2027</text>'
@@ -179,16 +178,22 @@ def hero():
 
 # ------------------------------------------------------------------ pill buttons
 def pill(label, accent=False, delay=0):
-    h = 46; r = h / 2; w = round(len(label) * 11.4 + 78)
+    pad = 5
+    inner_h = 44; r = inner_h / 2
+    inner_w = round(len(label) * 11.4 + 78)
+    w = inner_w + 2 * pad
+    h = inner_h + 2 * pad
     col = SKY if accent else CYAN
-    path = f"M{r} 1H{w-r}A{r-1} {r-1} 0 0 1 {w-r} {h-1}H{r}A{r-1} {r-1} 0 0 1 {r} 1Z"
-    defs = (f'<linearGradient id="pg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{w}" y2="0"><stop offset="0" stop-color="{CYAN}"/><stop offset="1" stop-color="{SKY}"/></linearGradient>'
-            '<filter id="pf" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>')
-    body = (f'<path d="{path}" fill="#000000" stroke="{col}" stroke-opacity=".6" stroke-width="1.4"/>'
-            f'<g><animateMotion dur="6s" begin="{delay}s" repeatCount="indefinite" path="{path}"/><circle r="6" fill="{col}" opacity=".6" filter="url(#pf)"/><circle r="2.4" fill="#fff"/></g>'
-            f'<text x="{w/2 - 8}" y="28.5" text-anchor="middle" style="{MONO}" font-size="12" font-weight="700" letter-spacing="3" fill="#FFFFFF">{E(label)}</text>'
-            f'<text x="{w - 28}" y="29" text-anchor="middle" style="{MONO}" font-size="13" font-weight="700" fill="{col}">↗</text>')
-    return svg(w, h, body, defs, mask=False, bg=None)
+    x0, y0 = pad + r, pad + 1
+    x1, y1 = pad + inner_w - r, pad + inner_h - 1
+    path = f"M{x0} {y0}H{x1}A{r-1} {r-1} 0 0 1 {x1} {y1}H{x0}A{r-1} {r-1} 0 0 1 {x0} {y0}Z"
+    defs = (f'<linearGradient id="pg" gradientUnits="userSpaceOnUse" x1="{pad}" y1="0" x2="{pad+inner_w}" y2="0"><stop offset="0" stop-color="{CYAN}"/><stop offset="1" stop-color="{SKY}"/></linearGradient>'
+            '<filter id="pf" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="2.5"/></filter>')
+    body = (f'<path d="{path}" fill="#0D1117" stroke="{col}" stroke-opacity=".55" stroke-width="1.3"/>'
+            f'<g><animateMotion dur="6s" begin="{delay}s" repeatCount="indefinite" path="{path}"/><circle r="5" fill="{col}" opacity=".6" filter="url(#pf)"/><circle r="2.2" fill="#fff"/></g>'
+            f'<text x="{pad + inner_w/2 - 8}" y="{pad + 27}" text-anchor="middle" style="{MONO}" font-size="12" font-weight="700" letter-spacing="3" fill="#FFFFFF">{E(label)}</text>'
+            f'<text x="{pad + inner_w - 28}" y="{pad + 27.5}" text-anchor="middle" style="{MONO}" font-size="13" font-weight="700" fill="{col}">↗</text>')
+    return svg(w, h, body, defs, mask=False)
 
 
 # ------------------------------------------------------------------ pipeline: equations -> intelligence -> silicon
@@ -238,7 +243,7 @@ def pipeline():
                   f'<animate attributeName="opacity" values="0;1;1;0" dur="2.4s" begin="0s" repeatCount="indefinite"/></circle>')
     for l, layer in enumerate(pos):
         for (x, y) in layer:
-            b += (f'<circle cx="{x}" cy="{y:.0f}" r="7.5" fill="#000000" stroke="{BLUE}" stroke-width="1.4"/>'
+            b += (f'<circle cx="{x}" cy="{y:.0f}" r="7.5" fill="#0D1117" stroke="{BLUE}" stroke-width="1.4"/>'
                   f'<circle cx="{x}" cy="{y:.0f}" r="3" fill="{BLUE}"><animate attributeName="fill" values="{BLUE};{CYAN};{BLUE}" dur="3.2s" begin="{l*.5}s" repeatCount="indefinite"/>'
                   f'<animate attributeName="r" values="2.6;4.8;2.6" dur="3.2s" begin="{l*.5}s" repeatCount="indefinite"/></circle>')
     # stage 3 · hardware
@@ -251,7 +256,7 @@ def pipeline():
     for i in range(5):
         o = 972 + i * 14
         b += f'<path d="M{o} 120v-11M{o} 200v11M960 {o-852}h-11M1040 {o-852}h11" stroke="{BLUE}" stroke-width="2" stroke-linecap="round"/>'
-    b += (f'<rect x="960" y="120" width="80" height="80" rx="11" fill="#000000" stroke="{BLUE}" stroke-width="1.6"/>'
+    b += (f'<rect x="960" y="120" width="80" height="80" rx="11" fill="#0D1117" stroke="{BLUE}" stroke-width="1.6"/>'
           f'<rect x="976" y="136" width="48" height="48" rx="7" fill="{BLUE}" opacity=".14" stroke="{SKY}" stroke-width="1.2"><animate attributeName="opacity" values=".12;.45;.12" dur="2.2s" repeatCount="indefinite"/></rect>'
           f'<text x="1000" y="165" text-anchor="middle" style="{MONO}" font-size="13" font-weight="700" fill="{CYAN}">MCU</text>'
           f'<circle cx="1033" cy="193" r="2" fill="{CYAN}"><animate attributeName="opacity" values="1;.1;1" dur="1.2s" repeatCount="indefinite"/></circle>')
