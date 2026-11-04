@@ -6,8 +6,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SI = json.load(open(os.path.join(HERE, "icons.json")))
 BRAND = json.load(open(os.path.join(HERE, "brand.json")))
 CYAN = "#00F0FF"
-LIME = "#00FF88"
-EDGE, CARD, TRACE = "#1E293B", "#080B10", "#1E293B"
+SKY = "#38BDF8"
+BLUE = "#3B82F6"
+EDGE, CARD, TRACE = "#172033", "#000000", "#1E293B"
 MONO = "font-family:'NK Mono','JetBrains Mono','SF Mono',Menlo,Consolas,monospace"
 
 # official brand colours; a few are swapped for the brand's lighter palette colour so they stay visible on black
@@ -79,22 +80,22 @@ def toolkit_svg():
     cy0, T, IC = 64, 34, 1.5          # first row y, tile half-size, icon scale (24px glyph -> 36px)
     H = cy0 + (len(ROWS) - 1) * PITCH + 96
     cyN = cy0 + (len(ROWS) - 1) * PITCH
-    defs = (f'<pattern id="dp" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="{CYAN}" opacity=".12"/></pattern>'
+    defs = (f'<pattern id="dp" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="{CYAN}" opacity=".08"/></pattern>'
             '<linearGradient id="py" x1="0" y1="0" x2="1" y2="1"><stop offset=".5" stop-color="#4B8BBE"/><stop offset=".5" stop-color="#FFD43B"/></linearGradient>')
-    body = (f'<rect width="{W}" height="{H}" fill="url(#dp)"/>'
+    body = (f'<rect width="{W}" height="{H}" fill="#000000"/><rect width="{W}" height="{H}" fill="url(#dp)"/>'
             f'<path d="M{SPINE} {cy0}V{cyN}" stroke="{TRACE}" stroke-width="1.8"/>'
             f'<g><animateMotion dur="{CYCLE}s" repeatCount="indefinite" path="M{SPINE} {cy0}V{cyN}" keyPoints="0;1;1" keyTimes="0;.7;1" calcMode="linear"/>'
-            f'<circle r="10" fill="{LIME}" opacity=".25"/><circle r="3.5" fill="{LIME}"/></g>')
+            f'<circle r="10" fill="{CYAN}" opacity=".25"/><circle r="3.5" fill="{SKY}"/></g>')
     for r, (name, items) in enumerate(ROWS):
         cy, delay = cy0 + r * PITCH, round(r * .7, 2)
         body += (f'<path d="M{SPINE} {cy}H{XEND}" stroke="{TRACE}" stroke-width="1.8"/>'
                  f'<circle cx="{SPINE}" cy="{cy}" r="4.5" fill="{CARD}" stroke="{CYAN}" stroke-width="1.8"/>'
                  f'<circle cx="{XEND}" cy="{cy}" r="3.8" fill="{CARD}" stroke="{EDGE}" stroke-width="1.6"/>'
-                 f'<text x="22" y="{cy-3}" style="{MONO}" font-size="13.5" font-weight="700" letter-spacing="2" fill="{LIME}">{E(name)}</text>'
+                 f'<text x="22" y="{cy-3}" style="{MONO}" font-size="13.5" font-weight="700" letter-spacing="2" fill="{CYAN}">{E(name)}</text>'
                  f'<text x="22" y="{cy+17}" style="{MONO}" font-size="11.5" letter-spacing="1.5" fill="#94A3B8">{len(items):02d} TOOLS</text>'
                  f'<g opacity="0"><animateMotion dur="{CYCLE}s" begin="{delay}s" repeatCount="indefinite" path="M{SPINE} {cy}H{XEND}" keyPoints="0;1;1" keyTimes="0;.875;1" calcMode="linear"/>'
                  f'<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.86;.875;1" dur="{CYCLE}s" begin="{delay}s" repeatCount="indefinite"/>'
-                 f'<circle r="12" fill="{CYAN}" opacity=".25"/><circle r="3.8" fill="{LIME}"/></g>')
+                 f'<circle r="12" fill="{SKY}" opacity=".25"/><circle r="3.8" fill="{CYAN}"/></g>')
         for j, (label, kind, key) in enumerate(items):
             cx = X0 + j * XP
             f = TRAVEL * (cx - SPINE) / (XEND - SPINE) / CYCLE
