@@ -26,10 +26,13 @@ FONTS = {
         400: "jetbrains-mono-latin-400-normal.woff2",
         700: "jetbrains-mono-latin-700-normal.woff2",
     },
+    "NK Italic": {
+        400: "Inter-Italic.woff2",
+    },
 }
 MONO = "font-family:'NK Mono','JetBrains Mono','SF Mono',Menlo,Consolas,monospace"
 SANS = "font-family:'NK Sans','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif"
-TAGLINE = "font-family:'NK Sans','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
+ITALIC = "font-family:'NK Italic','Inter',-apple-system,BlinkMacSystemFont,sans-serif;font-style:italic"
 
 
 @lru_cache(None)
@@ -64,8 +67,9 @@ def advances(fn, text, size):
 
 
 # ------------------------------------------------------------------ palette + shared svg helpers
-BLUE, ELEC, LIME, LIME2 = "#A8C9C8", "#8FB5B4", "#CDCBCA", "#F4F3F2"   # powder, deep powder, chrome silver, bright chrome
-DUSTC = ["#fff", "#fff", BLUE, LIME]
+CYAN, CYAN_HI, LIME, LIME2 = "#00F0FF", "#38BDF8", "#00FF88", "#C6FF00"
+BLUE, ELEC = CYAN, CYAN_HI
+DUSTC = ["#FFFFFF", CYAN, LIME, "#E0F2FE"]
 
 
 def svg(w, h, body, defs="", css="", fade_x=.06, fade_y=0.0, mask=True):
@@ -79,13 +83,13 @@ def svg(w, h, body, defs="", css="", fade_x=.06, fade_y=0.0, mask=True):
                   f'<mask id="my" maskUnits="userSpaceOnUse" x="0" y="0" width="{w}" height="{h}"><rect width="{w}" height="{h}" fill="url(#fy)"/></mask>')
             o += '<g mask="url(#my)">'; c += "</g>"
     out = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">'
-           f'<defs>{fx}{fy}{defs}</defs><style>{css}</style>{o}{body}{c}</svg>')
+           f'<defs>{fx}{fy}{defs}</defs><style>text{{text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased;}}{css}</style>{o}{body}{c}</svg>')
     return embed(out)
 
 
 LG = (f'<linearGradient id="lg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0">'
-      f'<stop offset="0" stop-color="{BLUE}" stop-opacity="0"/><stop offset=".25" stop-color="{BLUE}" stop-opacity=".9"/>'
-      f'<stop offset=".5" stop-color="{ELEC}"/><stop offset=".8" stop-color="{LIME}" stop-opacity=".95"/>'
+      f'<stop offset="0" stop-color="{CYAN}" stop-opacity="0"/><stop offset=".2" stop-color="{CYAN}" stop-opacity=".95"/>'
+      f'<stop offset=".5" stop-color="{CYAN_HI}"/><stop offset=".8" stop-color="{LIME}" stop-opacity=".95"/>'
       f'<stop offset="1" stop-color="{LIME2}" stop-opacity="0"/></linearGradient>')
 SPLINE = 'calcMode="spline" keyTimes="0;.33;.66;1" keySplines=".45 0 .55 1;.45 0 .55 1;.45 0 .55 1"'
 EASE = 'calcMode="spline" keyTimes="0;.5;1" keySplines=".45 0 .55 1;.45 0 .55 1"'
@@ -137,18 +141,18 @@ DOMAINS = [
 def hero():
     W, H = 1200, 520
     blobs = ""
-    for cx, cy, rx, ry, col, op, tx, ty, dur in [(280, 120, 330, 85, "#6E9593", .34, 160, 30, 19), (760, 150, 360, 95, "#3A4B4A", .55, -170, 20, 23),
-                                                 (1000, 100, 260, 70, BLUE, .22, -120, 40, 17), (560, 190, 300, 60, LIME, .09, 100, -20, 21)]:
+    for cx, cy, rx, ry, col, op, tx, ty, dur in [(280, 120, 330, 85, CYAN, .22, 160, 30, 19), (760, 150, 360, 95, LIME, .18, -170, 20, 23),
+                                                 (1000, 100, 260, 70, CYAN_HI, .20, -120, 40, 17), (560, 190, 300, 60, LIME2, .12, 100, -20, 21)]:
         blobs += (f'<ellipse cx="{cx}" cy="{cy}" rx="{rx}" ry="{ry}" fill="{col}" opacity="{op}"><animateTransform attributeName="transform" type="translate" '
                   f'values="0 0;{tx} {ty};0 0" dur="{dur}s" repeatCount="indefinite" {EASE}/></ellipse>')
     dust = ""
     for _ in range(34):
         x, y, r = random.randint(30, 1170), random.randint(30, 400), round(random.uniform(.6, 1.5), 1)
         d, b = random.uniform(4, 9), random.uniform(0, 8)
-        dust += (f'<circle cx="{x}" cy="{y}" r="{r}" fill="{random.choice(DUSTC)}" opacity=".1"><animate attributeName="opacity" values=".08;.7;.08" dur="{d:.1f}s" begin="-{b:.1f}s" repeatCount="indefinite"/>'
+        dust += (f'<circle cx="{x}" cy="{y}" r="{r}" fill="{random.choice(DUSTC)}" opacity=".15"><animate attributeName="opacity" values=".08;.8;.08" dur="{d:.1f}s" begin="-{b:.1f}s" repeatCount="indefinite"/>'
                  f'<animateTransform attributeName="transform" type="translate" values="0 0;{random.randint(-18,18)} {random.randint(-24,-6)};0 0" dur="{d*2:.1f}s" repeatCount="indefinite"/></circle>')
     # name: every letter placed from real font metrics, then rises in with a stagger
-    size, track, y = 66, 5.5, 238
+    size, track, y = 68, 5.5, 238
     adv = advances(FONTS["NK Sans"][800], NAME, size)
     x = 600 - (sum(adv) + track * (len(NAME) - 1)) / 2
     letters = ""
@@ -156,7 +160,7 @@ def hero():
         cx = x + a / 2; x += a + track
         if c != " ":
             letters += f'<text class="ch" style="animation-delay:{.25 + i*.04:.2f}s;{SANS}" x="{cx:.1f}" y="{y}" text-anchor="middle" font-size="{size}" font-weight="800" fill="#FFFFFF">{c}</text>'
-    tl = "".join(f'<text class="tg" style="animation-delay:{i*4}s;{TAGLINE}" x="600" y="316" text-anchor="middle" font-size="28" font-weight="400" letter-spacing="1.2" fill="{BLUE}">{E(t)}</text>' for i, t in enumerate(TAGLINES))
+    tl = "".join(f'<text class="tg" style="animation-delay:{i*4}s;{ITALIC}" x="600" y="318" text-anchor="middle" font-size="30" font-weight="400" letter-spacing=".6" fill="{CYAN}">{E(t)}</text>' for i, t in enumerate(TAGLINES))
     defs = (LG + f'<linearGradient id="bm"><stop offset="0" stop-color="{LIME}" stop-opacity="0"/><stop offset=".5" stop-color="{LIME}"/><stop offset="1" stop-color="{LIME}" stop-opacity="0"/></linearGradient>'
             '<filter id="bl" x="-30%" y="-100%" width="160%" height="300%"><feGaussianBlur stdDeviation="55"/></filter>'
             '<filter id="bl2" x="-5%" y="-50%" width="110%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>')
@@ -166,23 +170,23 @@ def hero():
     body = (f'<rect width="{W}" height="{H}" fill="#080808"/><g filter="url(#bl)">{blobs}</g>{dust}'
             f'<g id="wv">{waves(16, 350, 9, 26)}</g><use href="#wv" filter="url(#bl2)" opacity=".7"/>'
             f'<rect y="330" width="260" height="190" fill="url(#bm)" opacity=".13"><animateTransform attributeName="transform" type="translate" values="-300 0;1300 0" dur="11s" repeatCount="indefinite"/></rect>'
-            f'<text class="sm" x="600" y="148" text-anchor="middle" style="{MONO}" font-size="12" letter-spacing="6" fill="#888894">ELECTRICAL &amp; COMPUTER ENGINEERING · B.TECH 2027</text>'
+            f'<text class="sm" x="600" y="146" text-anchor="middle" style="{MONO}" font-size="13" font-weight="600" letter-spacing="6" fill="#94A3B8">ELECTRICAL &amp; COMPUTER ENGINEERING · B.TECH 2027</text>'
             f'<g>{letters}</g>'
-            f'<path d="M420 270H780" stroke="url(#lg)" stroke-width="1.5" stroke-dasharray="360" stroke-dashoffset="360"><animate attributeName="stroke-dashoffset" from="360" to="0" dur="1.8s" begin="1.4s" fill="freeze"/></path>{tl}')
+            f'<path d="M400 272H800" stroke="url(#lg)" stroke-width="2" stroke-dasharray="400" stroke-dashoffset="400"><animate attributeName="stroke-dashoffset" from="400" to="0" dur="1.8s" begin="1.4s" fill="freeze"/></path>{tl}')
     return svg(W, H, body, defs, css, fade_x=.08, fade_y=.12)
 
 
 # ------------------------------------------------------------------ pill buttons
 def pill(label, accent=False, delay=0):
     h = 46; r = h / 2; w = round(len(label) * 11.4 + 78)
-    col = LIME if accent else BLUE
+    col = LIME if accent else CYAN
     path = f"M{r} 1H{w-r}A{r-1} {r-1} 0 0 1 {w-r} {h-1}H{r}A{r-1} {r-1} 0 0 1 {r} 1Z"
-    defs = (f'<linearGradient id="pg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{w}" y2="0"><stop offset="0" stop-color="{BLUE}"/><stop offset="1" stop-color="{LIME}"/></linearGradient>'
+    defs = (f'<linearGradient id="pg" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="{w}" y2="0"><stop offset="0" stop-color="{CYAN}"/><stop offset="1" stop-color="{LIME}"/></linearGradient>'
             '<filter id="pf" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>')
-    body = (f'<path d="{path}" fill="#0C0D0E" fill-opacity=".75" stroke="{col}" stroke-opacity=".38"/>'
+    body = (f'<path d="{path}" fill="#080B10" fill-opacity=".85" stroke="{col}" stroke-opacity=".55" stroke-width="1.4"/>'
             f'<g><animateMotion dur="6s" begin="{delay}s" repeatCount="indefinite" path="{path}"/><circle r="6" fill="{col}" opacity=".6" filter="url(#pf)"/><circle r="2.4" fill="#fff"/></g>'
-            f'<text x="{w/2 - 8}" y="28.5" text-anchor="middle" style="{MONO}" font-size="12" letter-spacing="3" fill="#F4F4F5">{E(label)}</text>'
-            f'<text x="{w - 28}" y="29" text-anchor="middle" style="{MONO}" font-size="13" fill="{col}">↗</text>')
+            f'<text x="{w/2 - 8}" y="28.5" text-anchor="middle" style="{MONO}" font-size="12" font-weight="700" letter-spacing="3" fill="#FFFFFF">{E(label)}</text>'
+            f'<text x="{w - 28}" y="29" text-anchor="middle" style="{MONO}" font-size="13" font-weight="700" fill="{col}">↗</text>')
     return svg(w, h, body, defs, mask=False)
 
 
@@ -256,9 +260,9 @@ def pipeline():
               f'<path d="M{x2-9} 154L{x2} 160L{x2-9} 166" fill="none" stroke="{LIME}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>')
     # captions
     for x, t, s1, s2 in [(195, "PHYSICS", "diode-physics features", "Markov-chain weather"), (590, "INTELLIGENCE", "ANN · CNN · LSTM", "federated · explainable"), (1000, "HARDWARE", "ESP32 · STM32 · Pi 4", "INT8 edge inference")]:
-        b += (f'<text x="{x}" y="304" text-anchor="middle" style="{MONO}" font-size="12.5" font-weight="700" letter-spacing="5" fill="{LIME}">{t}</text>'
-              f'<text x="{x}" y="328" text-anchor="middle" style="{MONO}" font-size="11.5" fill="#8A8A93">{s1}</text>'
-              f'<text x="{x}" y="348" text-anchor="middle" style="{MONO}" font-size="11.5" fill="#55555F">{s2}</text>')
+        b += (f'<text x="{x}" y="304" text-anchor="middle" style="{MONO}" font-size="13" font-weight="700" letter-spacing="5" fill="{LIME}">{t}</text>'
+              f'<text x="{x}" y="328" text-anchor="middle" style="{MONO}" font-size="12" font-weight="500" fill="#CBD5E1">{s1}</text>'
+              f'<text x="{x}" y="348" text-anchor="middle" style="{MONO}" font-size="11.5" fill="#94A3B8">{s2}</text>')
     return svg(W, H, b, defs, css, fade_x=.04)
 
 
@@ -268,22 +272,22 @@ def divider(label=""):
     ds = [wave_d(35, 7, 700, j * 2.1) for j in range(3)]
     gw = len(label) * 14 + 56
     defs = LG + (f'<mask id="gp" maskUnits="userSpaceOnUse" x="0" y="0" width="{W}" height="{H}"><rect width="{W}" height="{H}" fill="#fff"/><rect x="{600 - gw/2}" y="0" width="{gw}" height="{H}" fill="#000"/></mask>' if label else "")
-    txt = f'<text x="600" y="40" text-anchor="middle" style="{MONO}" font-size="11" letter-spacing="5" fill="{LIME}" opacity=".9">{E(label.upper())}</text>' if label else ""
-    body = (f'<path d="{ds[0]}" fill="none" stroke="url(#lg)" stroke-width="1" opacity=".75" mask="url(#gp)"><animate attributeName="d" values="{";".join([ds[0], ds[1], ds[2], ds[0]])}" dur="14s" repeatCount="indefinite" {SPLINE}/></path>{txt}')
+    txt = f'<text x="600" y="40" text-anchor="middle" style="{MONO}" font-size="13" font-weight="700" letter-spacing="5" fill="{LIME}">{E(label.upper())}</text>' if label else ""
+    body = (f'<path d="{ds[0]}" fill="none" stroke="url(#lg)" stroke-width="1.4" opacity=".85" mask="url(#gp)"><animate attributeName="d" values="{";".join([ds[0], ds[1], ds[2], ds[0]])}" dur="14s" repeatCount="indefinite" {SPLINE}/></path>{txt}')
     return svg(W, H, body, defs, fade_x=.1)
 
 
 def row(idx, title, desc, tag, last=False, delay=0):
     W, H = 1200, 122
-    defs = (f'<linearGradient id="sw" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="320" y2="0"><stop offset="0" stop-color="{BLUE}" stop-opacity="0"/><stop offset=".5" stop-color="{BLUE}"/><stop offset="1" stop-color="{LIME}" stop-opacity="0"/>'
+    defs = (f'<linearGradient id="sw" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="320" y2="0"><stop offset="0" stop-color="{CYAN}" stop-opacity="0"/><stop offset=".5" stop-color="{CYAN}"/><stop offset="1" stop-color="{LIME}" stop-opacity="0"/>'
             f'<animateTransform attributeName="gradientTransform" type="translate" values="-320 0;1200 0" dur="7s" begin="{delay}s" repeatCount="indefinite"/></linearGradient>')
-    line = lambda y: f'<path d="M0 {y}H1200" stroke="#26282A"/><path d="M0 {y}H1200" stroke="url(#sw)" stroke-width="1.5"/>'
+    line = lambda y: f'<path d="M0 {y}H1200" stroke="#1E293B"/><path d="M0 {y}H1200" stroke="url(#sw)" stroke-width="1.8"/>'
     body = (f'{line(1)}{line(H-1) if last else ""}'
-            f'<text x="28" y="66" style="{MONO}" font-size="13" fill="#55555F">{E(idx)}</text>'
-            f'<text x="92" y="62" style="{SANS}" font-size="32" font-weight="500" letter-spacing=".3" fill="#F4F4F5">{E(title)}</text>'
-            f'<text x="92" y="93" style="{MONO}" font-size="13" fill="#8A8A93">{E(desc)}</text>'
-            f'<text x="1120" y="58" text-anchor="end" style="{MONO}" font-size="12" letter-spacing="3" fill="{LIME}" opacity=".92">{E(tag)}</text>'
-            f'<text x="1172" y="72" text-anchor="end" style="{MONO}" font-size="24" fill="{BLUE}">→<animateTransform attributeName="transform" type="translate" values="0 0;7 0;0 0" dur="3.2s" repeatCount="indefinite" {EASE}/></text>')
+            f'<text x="28" y="66" style="{MONO}" font-size="13.5" font-weight="700" fill="{CYAN}">{E(idx)}</text>'
+            f'<text x="92" y="62" style="{SANS}" font-size="32" font-weight="700" letter-spacing=".3" fill="#FFFFFF">{E(title)}</text>'
+            f'<text x="92" y="93" style="{MONO}" font-size="13.5" font-weight="400" fill="#94A3B8">{E(desc)}</text>'
+            f'<text x="1120" y="58" text-anchor="end" style="{MONO}" font-size="13" font-weight="700" letter-spacing="2.5" fill="{LIME}">{E(tag)}</text>'
+            f'<text x="1172" y="72" text-anchor="end" style="{MONO}" font-size="24" fill="{CYAN}">→<animateTransform attributeName="transform" type="translate" values="0 0;7 0;0 0" dur="3.2s" repeatCount="indefinite" {EASE}/></text>')
     return svg(W, H, body, defs, fade_x=.04)
 
 
@@ -292,14 +296,14 @@ def domains():
     xs = [150, 450, 750, 1050]
     c1 = "M0 70 C150 40 300 100 450 70 S750 40 900 70 S1100 90 1200 60"
     c2 = "M0 60 C150 95 300 45 450 70 S750 100 900 65 S1100 40 1200 75"
-    body = f'<path d="{c1}" fill="none" stroke="url(#lg)" stroke-width="1.2"><animate attributeName="d" values="{c1};{c2};{c1}" dur="12s" repeatCount="indefinite" {EASE}/></path>'
+    body = f'<path d="{c1}" fill="none" stroke="url(#lg)" stroke-width="1.5"><animate attributeName="d" values="{c1};{c2};{c1}" dur="12s" repeatCount="indefinite" {EASE}/></path>'
     for i, ((t, l1, l2), x) in enumerate(zip(DOMAINS, xs)):
         d = i * 1.1
-        body += (f'<circle cx="{x}" cy="70" r="14" fill="none" stroke="{BLUE}"><animate attributeName="r" values="6;30;6" dur="5s" begin="{d}s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0;.7" dur="5s" begin="{d}s" repeatCount="indefinite"/></circle>'
+        body += (f'<circle cx="{x}" cy="70" r="14" fill="none" stroke="{CYAN}"><animate attributeName="r" values="6;30;6" dur="5s" begin="{d}s" repeatCount="indefinite"/><animate attributeName="opacity" values=".7;0;.7" dur="5s" begin="{d}s" repeatCount="indefinite"/></circle>'
                  f'<circle cx="{x}" cy="70" r="4.5" fill="{LIME}"/>'
-                 f'<text x="{x}" y="140" text-anchor="middle" style="{SANS}" font-size="22" font-weight="500" letter-spacing=".3" fill="#F4F4F5">{E(t)}</text>'
-                 f'<text x="{x}" y="172" text-anchor="middle" style="{MONO}" font-size="12" fill="#8A8A93">{E(l1)}</text>'
-                 f'<text x="{x}" y="194" text-anchor="middle" style="{MONO}" font-size="12" fill="#55555F">{E(l2)}</text>')
+                 f'<text x="{x}" y="140" text-anchor="middle" style="{SANS}" font-size="22" font-weight="700" letter-spacing=".3" fill="#FFFFFF">{E(t)}</text>'
+                 f'<text x="{x}" y="172" text-anchor="middle" style="{MONO}" font-size="13" font-weight="500" fill="{CYAN}">{E(l1)}</text>'
+                 f'<text x="{x}" y="194" text-anchor="middle" style="{MONO}" font-size="12" fill="#94A3B8">{E(l2)}</text>')
     return svg(W, H, body, LG, fade_x=.04)
 
 
@@ -318,7 +322,7 @@ def w(name, s): open(f"{A}/{name}.svg", "w", encoding="utf-8").write(s)
 
 _w, _h, _b, _d = toolkit_svg()
 w("toolkit", svg(_w, _h, _b, _d, fade_x=.03, fade_y=.03))
-w("hero", hero()); w("pipeline", pipeline()); w("domains", domains()); w("footer", footer())
+w("hero", hero()); w("pipeline", pipeline()); w("domains", domains())
 w("pill-portfolio", pill("PORTFOLIO", True, 0)); w("pill-repos", pill("REPOSITORIES", False, -2)); w("pill-paper", pill("IEEE PAPER", False, -4))
 for n, lab in [("d-build", "what i build"), ("d-work", "selected work"), ("d-path", "path"), ("d-kit", "toolkit")]:
     w(n, divider(lab))
@@ -364,8 +368,6 @@ I build intelligence that respects physics — from governing equations to model
 {im("toolkit")}
 
 <p align="center"><sub>open to research collaborations &nbsp;·&nbsp; ML roles &nbsp;·&nbsp; data engineering challenges</sub></p>
-
-{im("footer")}
 
 </div>
 '''

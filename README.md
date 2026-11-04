@@ -40,6 +40,4 @@ I build intelligence that respects physics — from governing equations to model
 
 <p align="center"><sub>open to research collaborations &nbsp;·&nbsp; ML roles &nbsp;·&nbsp; data engineering challenges</sub></p>
 
-<img src="assets/footer.svg" width="100%">
-
 </div>

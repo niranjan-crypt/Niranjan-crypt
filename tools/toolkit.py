@@ -5,8 +5,9 @@ from xml.sax.saxutils import escape as E
 HERE = os.path.dirname(os.path.abspath(__file__))
 SI = json.load(open(os.path.join(HERE, "icons.json")))
 BRAND = json.load(open(os.path.join(HERE, "brand.json")))
-POWDER, CHROME, BRIGHT = "#A8C9C8", "#CDCBCA", "#F4F3F2"
-EDGE, CARD, TRACE = "#2A2D2F", "#0C0D0E", "#26292B"
+CYAN = "#00F0FF"
+LIME = "#00FF88"
+EDGE, CARD, TRACE = "#1E293B", "#080B10", "#1E293B"
 MONO = "font-family:'NK Mono','JetBrains Mono','SF Mono',Menlo,Consolas,monospace"
 
 # official brand colours; a few are swapped for the brand's lighter palette colour so they stay visible on black
@@ -78,23 +79,22 @@ def toolkit_svg():
     cy0, T, IC = 64, 34, 1.5          # first row y, tile half-size, icon scale (24px glyph -> 36px)
     H = cy0 + (len(ROWS) - 1) * PITCH + 96
     cyN = cy0 + (len(ROWS) - 1) * PITCH
-    defs = (f'<pattern id="dp" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="{CHROME}" opacity=".08"/></pattern>'
-            '<linearGradient id="py" x1="0" y1="0" x2="1" y2="1"><stop offset=".5" stop-color="#4B8BBE"/><stop offset=".5" stop-color="#FFD43B"/></linearGradient>'
-            f'<linearGradient id="chr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{BRIGHT}"/><stop offset=".5" stop-color="{CHROME}"/><stop offset="1" stop-color="#8E8D8C"/></linearGradient>')
+    defs = (f'<pattern id="dp" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="{CYAN}" opacity=".12"/></pattern>'
+            '<linearGradient id="py" x1="0" y1="0" x2="1" y2="1"><stop offset=".5" stop-color="#4B8BBE"/><stop offset=".5" stop-color="#FFD43B"/></linearGradient>')
     body = (f'<rect width="{W}" height="{H}" fill="url(#dp)"/>'
-            f'<path d="M{SPINE} {cy0}V{cyN}" stroke="{TRACE}" stroke-width="1.6"/>'
+            f'<path d="M{SPINE} {cy0}V{cyN}" stroke="{TRACE}" stroke-width="1.8"/>'
             f'<g><animateMotion dur="{CYCLE}s" repeatCount="indefinite" path="M{SPINE} {cy0}V{cyN}" keyPoints="0;1;1" keyTimes="0;.7;1" calcMode="linear"/>'
-            f'<circle r="9" fill="{POWDER}" opacity=".22"/><circle r="3" fill="{BRIGHT}"/></g>')
+            f'<circle r="10" fill="{LIME}" opacity=".25"/><circle r="3.5" fill="{LIME}"/></g>')
     for r, (name, items) in enumerate(ROWS):
         cy, delay = cy0 + r * PITCH, round(r * .7, 2)
-        body += (f'<path d="M{SPINE} {cy}H{XEND}" stroke="{TRACE}" stroke-width="1.6"/>'
-                 f'<circle cx="{SPINE}" cy="{cy}" r="4.2" fill="{CARD}" stroke="{POWDER}" stroke-width="1.6"/>'
-                 f'<circle cx="{XEND}" cy="{cy}" r="3.6" fill="{CARD}" stroke="{EDGE}" stroke-width="1.6"/>'
-                 f'<text x="22" y="{cy-3}" style="{MONO}" font-size="12.5" font-weight="700" letter-spacing="2.5" fill="url(#chr)">{E(name)}</text>'
-                 f'<text x="22" y="{cy+17}" style="{MONO}" font-size="11" letter-spacing="2" fill="#5F5E5D">{len(items):02d} TOOLS</text>'
+        body += (f'<path d="M{SPINE} {cy}H{XEND}" stroke="{TRACE}" stroke-width="1.8"/>'
+                 f'<circle cx="{SPINE}" cy="{cy}" r="4.5" fill="{CARD}" stroke="{CYAN}" stroke-width="1.8"/>'
+                 f'<circle cx="{XEND}" cy="{cy}" r="3.8" fill="{CARD}" stroke="{EDGE}" stroke-width="1.6"/>'
+                 f'<text x="22" y="{cy-3}" style="{MONO}" font-size="13.5" font-weight="700" letter-spacing="2" fill="{LIME}">{E(name)}</text>'
+                 f'<text x="22" y="{cy+17}" style="{MONO}" font-size="11.5" letter-spacing="1.5" fill="#94A3B8">{len(items):02d} TOOLS</text>'
                  f'<g opacity="0"><animateMotion dur="{CYCLE}s" begin="{delay}s" repeatCount="indefinite" path="M{SPINE} {cy}H{XEND}" keyPoints="0;1;1" keyTimes="0;.875;1" calcMode="linear"/>'
                  f'<animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.86;.875;1" dur="{CYCLE}s" begin="{delay}s" repeatCount="indefinite"/>'
-                 f'<circle r="12" fill="{POWDER}" opacity=".2"/><circle r="3.6" fill="{BRIGHT}"/></g>')
+                 f'<circle r="12" fill="{CYAN}" opacity=".25"/><circle r="3.8" fill="{LIME}"/></g>')
         for j, (label, kind, key) in enumerate(items):
             cx = X0 + j * XP
             f = TRAVEL * (cx - SPINE) / (XEND - SPINE) / CYCLE
@@ -105,10 +105,10 @@ def toolkit_svg():
                 col = "url(#py)" if key == "python" else brand(key)
                 icon = f'<g transform="translate({-12*IC},{-12*IC}) scale({IC})" fill="{col}"><path d="{SI[key]}"/></g>'
             else:
-                col = GLYPH_COLOR.get(key, POWDER)
-                icon = f'<g transform="translate({-12*IC},{-12*IC}) scale({IC})" fill="none" stroke="{col}" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round">{GL[key]}</g>'
-            body += (f'<rect x="{cx-T}" y="{cy-T}" width="{2*T}" height="{2*T}" rx="17" fill="{CARD}" stroke="{EDGE}" stroke-width="1.3">{anim("stroke", EDGE, POWDER)}</rect>'
-                     f'<rect x="{cx-T}" y="{cy-T}" width="{2*T}" height="{2*T}" rx="17" fill="{POWDER}" opacity="0"><animate attributeName="opacity" values="0;0;.14;0;0" keyTimes="{kt}" dur="{CYCLE}s" begin="{delay}s" repeatCount="indefinite"/></rect>'
+                col = GLYPH_COLOR.get(key, CYAN)
+                icon = f'<g transform="translate({-12*IC},{-12*IC}) scale({IC})" fill="none" stroke="{col}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">{GL[key]}</g>'
+            body += (f'<rect x="{cx-T}" y="{cy-T}" width="{2*T}" height="{2*T}" rx="17" fill="{CARD}" stroke="{EDGE}" stroke-width="1.4">{anim("stroke", EDGE, CYAN)}</rect>'
+                     f'<rect x="{cx-T}" y="{cy-T}" width="{2*T}" height="{2*T}" rx="17" fill="{CYAN}" opacity="0"><animate attributeName="opacity" values="0;0;.16;0;0" keyTimes="{kt}" dur="{CYCLE}s" begin="{delay}s" repeatCount="indefinite"/></rect>'
                      f'<g transform="translate({cx},{cy})"><g>{pop}{icon}</g></g>'
-                     f'<text x="{cx}" y="{cy+T+19}" text-anchor="middle" style="{MONO}" font-size="12.5" fill="#A3A2A1">{E(label)}</text>')
+                     f'<text x="{cx}" y="{cy+T+19}" text-anchor="middle" style="{MONO}" font-size="13" font-weight="500" fill="#E2E8F0">{E(label)}</text>')
     return W, H, body, defs
